@@ -22,6 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Performance: Preconnect to external domains */}
+        <link rel="preconnect" href="https://fervogear.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fast.wistia.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fervogear.com" />
+        <link rel="dns-prefetch" href="https://fast.wistia.com" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );

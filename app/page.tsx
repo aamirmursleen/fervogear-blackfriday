@@ -1,24 +1,27 @@
+import dynamic from 'next/dynamic';
 import PremiumCountdown from '@/components/PremiumCountdown';
 import StickyMobileNav from '@/components/StickyMobileNav';
 import UltimateHero from '@/components/UltimateHero';
 import Highlights from '@/components/Highlights';
-import AboutUs from '@/components/AboutUs';
 import FreeDesignCTA from '@/components/FreeDesignCTA';
-import PainSolution from '@/components/PainSolution';
-import ComparisonTable from '@/components/ComparisonTable';
-import SFICertification from '@/components/SFICertification';
-import PDFDownloads from '@/components/PDFDownloads';
-import VideoTestimonials from '@/components/VideoTestimonials';
-import MassiveCustomerGallery from '@/components/MassiveCustomerGallery';
-import MockupsSlider from '@/components/MockupsSlider';
-import ValueStack from '@/components/ValueStack';
-import PaymentCalculator from '@/components/PaymentCalculator';
-import PremiumBenefits from '@/components/PremiumBenefits';
-import Process from '@/components/Process';
-import PremiumSocialProof from '@/components/PremiumSocialProof';
-import InteractiveFAQ from '@/components/InteractiveFAQ';
-import PremiumFinalCTA from '@/components/PremiumFinalCTA';
-import PremiumFooter from '@/components/PremiumFooter';
+
+// Dynamic imports for below-fold sections - loads only when visible
+const AboutUs = dynamic(() => import('@/components/AboutUs'), { ssr: true });
+const PainSolution = dynamic(() => import('@/components/PainSolution'), { ssr: true });
+const ComparisonTable = dynamic(() => import('@/components/ComparisonTable'), { ssr: true });
+const SFICertification = dynamic(() => import('@/components/SFICertification'), { ssr: true });
+const PDFDownloads = dynamic(() => import('@/components/PDFDownloads'), { ssr: true });
+const VideoTestimonials = dynamic(() => import('@/components/VideoTestimonials'), { ssr: true });
+const MassiveCustomerGallery = dynamic(() => import('@/components/MassiveCustomerGallery'), { ssr: true });
+const MockupsSlider = dynamic(() => import('@/components/MockupsSlider'), { ssr: true });
+const ValueStack = dynamic(() => import('@/components/ValueStack'), { ssr: true });
+const PaymentCalculator = dynamic(() => import('@/components/PaymentCalculator'), { ssr: true });
+const PremiumBenefits = dynamic(() => import('@/components/PremiumBenefits'), { ssr: true });
+const Process = dynamic(() => import('@/components/Process'), { ssr: true });
+const PremiumSocialProof = dynamic(() => import('@/components/PremiumSocialProof'), { ssr: true });
+const InteractiveFAQ = dynamic(() => import('@/components/InteractiveFAQ'), { ssr: true });
+const PremiumFinalCTA = dynamic(() => import('@/components/PremiumFinalCTA'), { ssr: true });
+const PremiumFooter = dynamic(() => import('@/components/PremiumFooter'), { ssr: true });
 
 export default function Home() {
   return (
