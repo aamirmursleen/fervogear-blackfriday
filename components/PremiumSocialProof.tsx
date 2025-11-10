@@ -67,15 +67,16 @@ export default function PremiumSocialProof() {
               className="group relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border-2 border-gray-800 rounded-3xl overflow-hidden hover:border-brand-orange/50 transition-all duration-500 hover:shadow-2xl hover:shadow-brand-orange/20 hover:-translate-y-2"
             >
               {/* Large Image - Takes more space */}
-              <div className="relative w-full h-80 lg:h-96 overflow-hidden">
+              <div className="relative w-full h-96 lg:h-[500px] overflow-hidden">
                 <Image
                   src={testimonial.image}
                   alt={testimonial.name}
                   fill
-                  className="object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  className="object-cover object-top transform group-hover:scale-110 transition-transform duration-700"
+                  style={{ objectPosition: '50% 20%' }}
                 />
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
 
                 {/* Floating badge */}
                 <div className="absolute top-6 right-6 bg-brand-orange/90 backdrop-blur-sm text-white px-4 py-2 rounded-full font-bold text-sm flex items-center gap-2 shadow-lg">
