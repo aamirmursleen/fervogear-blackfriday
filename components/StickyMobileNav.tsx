@@ -35,7 +35,7 @@ export default function StickyMobileNav() {
       ),
       label: 'Design',
       isMainCTA: true,
-      href: 'https://fervogear.com/custom-race-suit/?utm_source=landing&utm_medium=web&utm_campaign=Black_Friday_2025&utm_id=bf_sfi5_deal'
+      href: 'https://fervogear.typeform.com/custom?utm_source=website&utm_medium=custom-race-suit-landing&utm_campaign=sticky-nav-bar'
     },
     {
       id: 'contact',
@@ -72,15 +72,15 @@ export default function StickyMobileNav() {
     <nav className="fixed bottom-0 left-0 right-0 z-50">
       {/* Beautiful backdrop blur bar - Mobile & Desktop */}
       <div className="bg-black/90 backdrop-blur-xl border-t border-gray-800 shadow-2xl">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-end justify-center md:justify-around px-1 md:px-8 py-1.5 md:py-3 safe-bottom gap-2 md:gap-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-end justify-center md:justify-around px-1 md:px-4 py-1.5 md:py-2 safe-bottom gap-2 md:gap-3">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleClick(item)}
-                className={`group relative flex flex-col items-center justify-center gap-0.5 md:gap-1 min-w-[60px] md:min-w-[80px] py-1.5 md:py-2 rounded-lg md:rounded-xl transition-all duration-300 ${
+                className={`group relative flex flex-col items-center justify-center gap-0.5 md:gap-1 min-w-[60px] md:min-w-[70px] py-1.5 md:py-2 rounded-lg md:rounded-xl transition-all duration-300 ${
                   item.isMainCTA
-                    ? 'bg-gradient-to-r from-brand-orange to-orange-600 text-white scale-105 md:scale-110 -mt-6 md:-mt-8 px-4 md:px-6 py-2 md:py-3 shadow-lg shadow-brand-orange/50 hover:scale-110 md:hover:scale-[1.15]'
+                    ? 'bg-gradient-to-r from-brand-orange to-orange-600 text-white scale-105 -mt-6 md:-mt-6 px-4 md:px-5 py-2 md:py-2.5 shadow-lg shadow-brand-orange/50 hover:scale-110'
                     : activeSection === item.id
                     ? 'text-brand-orange'
                     : 'text-gray-400 hover:text-white active:text-white'
