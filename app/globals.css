@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white antialiased;
+  }
+}
+
+@layer components {
+  .cta-button {
+    @apply bg-brand-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+
+  .cta-button-secondary {
+    @apply border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300;
+  }
+
+  .section-heading {
+    @apply text-4xl md:text-5xl font-bold mb-6 text-white;
+  }
+
+  .section-subheading {
+    @apply text-xl md:text-2xl text-gray-300 mb-8;
+  }
+}
