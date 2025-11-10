@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function PremiumFooter() {
   return (
     <footer className="relative overflow-hidden">
@@ -62,9 +64,16 @@ export default function PremiumFooter() {
           <div className="grid md:grid-cols-5 gap-12 mb-12">
             {/* Column 1: Brand */}
             <div className="md:col-span-2">
-              <h3 className="text-3xl font-bold bg-gradient-to-r from-brand-orange to-orange-600 bg-clip-text text-transparent mb-4">
-                FervoGear
-              </h3>
+              {/* FervoGear Logo */}
+              <div className="mb-6">
+                <Image
+                  src="https://fervogear.com/wp-content/uploads/2024/01/47be92d0-c962-47ad-beee-9d0582d9448d.png"
+                  alt="FervoGear Logo"
+                  width={200}
+                  height={60}
+                  className="h-12 w-auto"
+                />
+              </div>
               <p className="text-gray-400 mb-6 leading-relaxed text-lg">
                 Premium custom racing suits designed by racers, for racers. SFI-certified protection with unmatched style and industry-leading turnaround.
               </p>
