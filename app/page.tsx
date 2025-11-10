@@ -65,7 +65,9 @@ export default function Home() {
       <MockupsSlider />
 
       {/* Value stack - Show what they get */}
-      <ValueStack />
+      <div id="pricing-section">
+        <ValueStack />
+      </div>
 
       {/* Payment Calculator - Affirm & Klarna */}
       <PaymentCalculator />
