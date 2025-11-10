@@ -1,9 +1,11 @@
 import PremiumCountdown from '@/components/PremiumCountdown';
 import UltimateHero from '@/components/UltimateHero';
 import Highlights from '@/components/Highlights';
+import AboutUs from '@/components/AboutUs';
 import FreeDesignCTA from '@/components/FreeDesignCTA';
 import PainSolution from '@/components/PainSolution';
 import ComparisonTable from '@/components/ComparisonTable';
+import SFICertification from '@/components/SFICertification';
 import PDFDownloads from '@/components/PDFDownloads';
 import VideoTestimonials from '@/components/VideoTestimonials';
 import MassiveCustomerGallery from '@/components/MassiveCustomerGallery';
@@ -13,7 +15,7 @@ import PaymentCalculator from '@/components/PaymentCalculator';
 import PremiumBenefits from '@/components/PremiumBenefits';
 import Process from '@/components/Process';
 import PremiumSocialProof from '@/components/PremiumSocialProof';
-import FAQAccordion from '@/components/FAQAccordion';
+import InteractiveFAQ from '@/components/InteractiveFAQ';
 import PremiumFinalCTA from '@/components/PremiumFinalCTA';
 import PremiumFooter from '@/components/PremiumFooter';
 
@@ -29,6 +31,9 @@ export default function Home() {
       {/* Highlights - Why Choose FervoGear */}
       <Highlights />
 
+      {/* About Us - Company story */}
+      <AboutUs />
+
       {/* FREE Design CTA - Lead with low commitment */}
       <FreeDesignCTA />
 
@@ -37,6 +42,9 @@ export default function Home() {
 
       {/* Comparison Table - Competitive advantage */}
       <ComparisonTable />
+
+      {/* SFI Certification - Trust & Safety */}
+      <SFICertification />
 
       {/* PDF Downloads - Resources */}
       <PDFDownloads />
@@ -65,8 +73,8 @@ export default function Home() {
       {/* Social proof gallery with testimonials */}
       <PremiumSocialProof />
 
-      {/* FAQ Accordion - Answer questions */}
-      <FAQAccordion />
+      {/* Interactive FAQ with AI Chatbot - Answer questions */}
+      <InteractiveFAQ />
 
       {/* Final CTA - Last chance */}
       <PremiumFinalCTA />
