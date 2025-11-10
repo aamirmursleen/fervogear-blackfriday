@@ -1,4 +1,5 @@
 import PremiumCountdown from '@/components/PremiumCountdown';
+import StickyMobileNav from '@/components/StickyMobileNav';
 import UltimateHero from '@/components/UltimateHero';
 import Highlights from '@/components/Highlights';
 import AboutUs from '@/components/AboutUs';
@@ -21,9 +22,12 @@ import PremiumFooter from '@/components/PremiumFooter';
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative">
+    <main className="min-h-screen relative pb-20 md:pb-0">
       {/* Sticky countdown timer */}
       <PremiumCountdown />
+
+      {/* Sticky Mobile Navigation */}
+      <StickyMobileNav />
 
       {/* ULTIMATE Hero section - Conversion focused */}
       <UltimateHero />
@@ -53,7 +57,9 @@ export default function Home() {
       <VideoTestimonials />
 
       {/* Massive Customer Gallery */}
-      <MassiveCustomerGallery />
+      <div id="customer-gallery">
+        <MassiveCustomerGallery />
+      </div>
 
       {/* Animated Mockups Slider - Design showcase */}
       <MockupsSlider />
@@ -74,7 +80,9 @@ export default function Home() {
       <PremiumSocialProof />
 
       {/* Interactive FAQ with AI Chatbot - Answer questions */}
-      <InteractiveFAQ />
+      <div id="faq-section">
+        <InteractiveFAQ />
+      </div>
 
       {/* Final CTA - Last chance */}
       <PremiumFinalCTA />
