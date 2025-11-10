@@ -35,15 +35,53 @@ export default function PremiumCountdown() {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-brand-orange via-orange-600 to-brand-orange backdrop-blur-md border-b border-orange-400/20">
-      <div className="max-w-7xl mx-auto px-4 py-3">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-3">
+      <div className="max-w-7xl mx-auto px-2 md:px-4 py-1.5 md:py-3">
+        {/* Mobile: Compact single line */}
+        <div className="md:hidden flex items-center justify-between gap-2">
+          <div className="flex items-center gap-1.5 flex-1 min-w-0">
+            <span className="relative flex h-2 w-2 flex-shrink-0">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+            </span>
+            <span className="font-bold text-[11px] truncate">
+              BLACK FRIDAY: $451 OFF
+            </span>
+          </div>
+
+          {/* Compact countdown */}
+          <div className="flex gap-0.5 flex-shrink-0">
+            {[
+              { value: timeLeft.days, label: 'D' },
+              { value: timeLeft.hours, label: 'H' },
+              { value: timeLeft.minutes, label: 'M' },
+            ].map((item, index) => (
+              <div key={index} className="bg-white/20 backdrop-blur-sm rounded px-1 py-0.5 min-w-[28px] text-center">
+                <div className="text-sm font-bold text-white leading-none">{item.value}</div>
+                <div className="text-[8px] text-white/80 leading-none">{item.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Small CTA */}
+          <a
+            href="https://fervogear.typeform.com/custom?utm_source=website&utm_medium=custom-race-suit-landing&utm_campaign=trusted-racers"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-brand-orange px-3 py-1 rounded-md font-bold text-[11px] whitespace-nowrap flex-shrink-0"
+          >
+            CLAIM
+          </a>
+        </div>
+
+        {/* Desktop: Full layout */}
+        <div className="hidden md:flex items-center justify-between gap-3">
           {/* Left side - Offer text */}
           <div className="flex items-center gap-3 text-white">
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
             </span>
-            <span className="font-bold text-sm md:text-base">
+            <span className="font-bold text-base">
               BLACK FRIDAY: Save $451 + FREE Gloves
             </span>
           </div>
