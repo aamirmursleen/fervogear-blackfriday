@@ -26,23 +26,52 @@ export default function SFICertification() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Certificate Image */}
+          {/* Left: Certificate - CLEAN DISPLAY */}
           <div className="relative group">
+            {/* Glow effect */}
             <div className="absolute -inset-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-3xl opacity-20 blur-2xl group-hover:opacity-40 transition-opacity"></div>
-            <div className="relative bg-white rounded-3xl p-4 shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-                <Image
-                  src="https://fervogear.com/wp-content/uploads/2024/04/SFI-Certification-FervoGear.jpg"
-                  alt="FervoGear SFI Certification"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              {/* Verified badge */}
-              <div className="absolute -top-6 -right-6 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full p-4 shadow-xl animate-bounce">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+            {/* Certificate card - professional presentation */}
+            <div className="relative bg-gradient-to-br from-gray-900 to-black border-2 border-green-500/50 rounded-3xl p-8 shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
+              {/* SFI Approved Badge */}
+              <div className="absolute -top-6 -right-6 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full p-5 shadow-xl animate-bounce z-20">
+                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
+              </div>
+
+              {/* Certificate icon/graphic instead of photo */}
+              <div className="bg-white rounded-2xl p-12 mb-6">
+                <div className="text-center">
+                  {/* SFI Logo placeholder */}
+                  <div className="text-8xl mb-4">🛡️</div>
+                  <div className="border-4 border-green-500 rounded-xl p-8">
+                    <div className="text-green-600 font-black text-4xl mb-2">SFI</div>
+                    <div className="text-gray-700 font-bold text-xl mb-4">CERTIFIED MANUFACTURER</div>
+                    <div className="flex gap-4 justify-center mb-4">
+                      <div className="bg-green-100 text-green-800 font-bold px-4 py-2 rounded-lg">
+                        SFI 3.2A/1
+                      </div>
+                      <div className="bg-green-100 text-green-800 font-bold px-4 py-2 rounded-lg">
+                        SFI 3.2A/5
+                      </div>
+                    </div>
+                    <div className="text-gray-600 font-semibold">FervoGear, LLC</div>
+                    <div className="text-gray-500 text-sm mt-2">McKinney, Texas</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Trust badges */}
+              <div className="grid grid-cols-2 gap-3 text-center">
+                <div className="bg-green-500/10 border border-green-500/30 rounded-xl p-3">
+                  <div className="text-2xl mb-1">✅</div>
+                  <div className="text-white font-semibold text-sm">Official SFI</div>
+                </div>
+                <div className="bg-green-500/10 border border-green-500/30 rounded-xl p-3">
+                  <div className="text-2xl mb-1">🔥</div>
+                  <div className="text-white font-semibold text-sm">Fire Tested</div>
+                </div>
               </div>
             </div>
           </div>
