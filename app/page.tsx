@@ -9,6 +9,7 @@ import VideoTestimonials from '@/components/VideoTestimonials';
 import MassiveCustomerGallery from '@/components/MassiveCustomerGallery';
 import MockupsSlider from '@/components/MockupsSlider';
 import ValueStack from '@/components/ValueStack';
+import PaymentCalculator from '@/components/PaymentCalculator';
 import PremiumBenefits from '@/components/PremiumBenefits';
 import Process from '@/components/Process';
 import PremiumSocialProof from '@/components/PremiumSocialProof';
@@ -51,6 +52,9 @@ export default function Home() {
 
       {/* Value stack - Show what they get */}
       <ValueStack />
+
+      {/* Payment Calculator - Affirm & Klarna */}
+      <PaymentCalculator />
 
       {/* Benefits - Why FervoGear */}
       <PremiumBenefits />
