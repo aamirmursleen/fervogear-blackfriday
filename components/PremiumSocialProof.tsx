@@ -125,35 +125,81 @@ export default function PremiumSocialProof() {
           ))}
         </div>
 
-        {/* Design mockups showcase */}
+        {/* Design mockups showcase - CREATIVE & VISIBLE */}
         <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
-              Unlimited Design <span className="text-brand-orange">Possibilities</span>
+          <div className="text-center mb-16">
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              Unlimited Design <span className="bg-gradient-to-r from-brand-orange to-orange-600 bg-clip-text text-transparent">Possibilities</span>
             </h3>
-            <p className="text-xl text-gray-400">
-              Every suit is custom-made to your exact specifications
+            <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
+              Every suit is custom-made to your exact specifications. Any color. Any logo. Any design.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mockups.map((mockup, index) => (
               <div
                 key={index}
-                className="relative aspect-[3/4] rounded-2xl overflow-hidden group cursor-pointer"
+                className="group relative"
               >
-                <Image
-                  src={mockup}
-                  alt={`Custom Design ${index + 1}`}
-                  fill
-                  className="object-cover transform group-hover:scale-110 transition-transform duration-700"
-                />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <span className="text-white font-semibold">Custom Design #{index + 1}</span>
+                {/* Card with white/light background for visibility */}
+                <div className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-gradient-to-br from-white to-gray-100 p-4 shadow-2xl hover:shadow-brand-orange/30 transition-all duration-500 hover:-translate-y-2">
+                  {/* Design badge */}
+                  <div className="absolute top-6 right-6 z-10 bg-brand-orange text-white px-4 py-2 rounded-full font-bold text-xs shadow-lg">
+                    DESIGN #{index + 1}
+                  </div>
+
+                  {/* Image container with better contrast */}
+                  <div className="relative w-full h-full rounded-2xl overflow-hidden border-4 border-gray-200 group-hover:border-brand-orange transition-colors duration-500">
+                    <Image
+                      src={mockup}
+                      alt={`Custom Design ${index + 1}`}
+                      fill
+                      className="object-contain transform group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+
+                  {/* Hover overlay with info */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-end p-8 rounded-3xl">
+                    <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      <div className="text-white font-bold text-lg mb-2">Custom Design #{index + 1}</div>
+                      <div className="text-gray-300 text-sm mb-4">Click to see details</div>
+                      <div className="inline-flex items-center gap-2 bg-brand-orange text-white px-4 py-2 rounded-lg text-sm font-semibold">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                        View Design
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
+                {/* Decorative glow effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-brand-orange to-orange-600 rounded-3xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
               </div>
             ))}
+          </div>
+
+          {/* CTA after mockups */}
+          <div className="mt-16 text-center">
+            <div className="bg-gradient-to-r from-gray-900 to-black border-2 border-brand-orange/30 rounded-2xl p-8 md:p-12 inline-block">
+              <div className="text-4xl mb-4">🎨</div>
+              <h4 className="text-2xl md:text-3xl font-bold mb-4">
+                Your Design. <span className="text-brand-orange">Your Vision.</span>
+              </h4>
+              <p className="text-gray-400 mb-6 max-w-2xl">
+                These are just examples. Your suit will be 100% unique to you. Start with a FREE mockup and see your exact design before ordering.
+              </p>
+              <a
+                href="https://fervogear.typeform.com/custom?utm_source=website&utm_medium=custom-race-suit-landing&utm_campaign=trusted-racers"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-button-premium inline-block"
+              >
+                <span className="relative z-10">GET MY FREE DESIGN MOCKUP</span>
+              </a>
+            </div>
           </div>
         </div>
 
