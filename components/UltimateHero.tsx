@@ -1,11 +1,31 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const CTA_LINK = 'https://fervogear.typeform.com/custom?utm_source=website&utm_medium=custom-race-suit-landing&utm_campaign=hero-button';
 
 export default function UltimateHero() {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const heroImages = [
+    'https://fervogear.com/wp-content/uploads/2024/04/Jacob-Julson-Worn-FervoGear-Race-Suit.jpg',
+    'https://fervogear.com/wp-content/uploads/2024/05/Sendit-Rubi.jpg',
+    'https://fervogear.com/wp-content/uploads/2024/08/Driver-Wearing-FervoGear-Suit-12.jpg',
+    'https://fervogear.com/wp-content/uploads/2024/04/Jarrod-Lindemann-Worn-FervoGear-Race-Suit.jpg',
+    'https://fervogear.com/wp-content/uploads/2024/05/Jasmyn-DeVoe-Worn-FervoGear-Suit.webp',
+    'https://fervogear.com/wp-content/uploads/2024/05/Jernigan-Team-Worn-FervoGear-Suit.webp',
+    'https://fervogear.com/wp-content/uploads/2024/08/Driver-Wearing-FervoGear-Suit-13.jpg',
+  ];
+
+  // Auto-slide every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Ultra-dynamic background */}
@@ -144,23 +164,51 @@ export default function UltimateHero() {
             </div>
           </div>
 
-          {/* Right: Hero Image */}
+          {/* Right: Auto-Playing Image Slider */}
           <div className="relative">
-            {/* Main hero image */}
+            {/* Main slider container */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
               <div className="relative aspect-[3/4]">
-                <Image
-                  src="https://fervogear.com/wp-content/uploads/2025/10/Helloween.jpg"
-                  alt="Custom FervoGear Racing Suit"
-                  fill
-                  className="object-cover transform group-hover:scale-110 transition-transform duration-700"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                {/* Sliding images */}
+                {heroImages.map((image, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+                      index === currentImage
+                        ? 'opacity-100 scale-100 z-10'
+                        : 'opacity-0 scale-105 z-0'
+                    }`}
+                  >
+                    <Image
+                      src={image}
+                      alt={`FervoGear Customer ${index + 1}`}
+                      fill
+                      className="object-cover object-top"
+                      priority={index === 0}
+                    />
+                  </div>
+                ))}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
+
+                {/* Slide indicator dots */}
+                <div className="absolute top-4 right-4 flex gap-1 z-20">
+                  {heroImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImage(index)}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        index === currentImage
+                          ? 'bg-brand-orange w-6'
+                          : 'bg-white/40 hover:bg-white/60'
+                      }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
 
-              {/* Floating badges on image */}
-              <div className="absolute bottom-6 left-6 right-6 space-y-3">
+              {/* Floating price badge on image */}
+              <div className="absolute bottom-6 left-6 right-6 space-y-3 z-20">
                 <div className="bg-black/80 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
                   <div className="flex items-center justify-between mb-3">
                     <div>
