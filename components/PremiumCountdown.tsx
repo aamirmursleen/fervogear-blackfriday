@@ -64,7 +64,7 @@ export default function PremiumCountdown() {
 
           {/* Small CTA */}
           <a
-            href="https://fervogear.typeform.com/custom?utm_source=website&utm_medium=custom-race-suit-landing&utm_campaign=trusted-racers"
+            href="https://fervogear.typeform.com/custom?utm_source=website&utm_medium=custom-race-suit-landing&utm_campaign=countdown-timer-mobile"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-brand-orange px-3 py-1 rounded-md font-bold text-[11px] whitespace-nowrap flex-shrink-0"
@@ -106,7 +106,7 @@ export default function PremiumCountdown() {
 
           {/* Right side - CTA */}
           <a
-            href="https://fervogear.typeform.com/custom?utm_source=website&utm_medium=custom-race-suit-landing&utm_campaign=trusted-racers"
+            href="https://fervogear.typeform.com/custom?utm_source=website&utm_medium=custom-race-suit-landing&utm_campaign=countdown-timer"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-brand-orange px-6 py-2 rounded-lg font-bold text-sm hover:bg-gray-100 transition-colors whitespace-nowrap"
