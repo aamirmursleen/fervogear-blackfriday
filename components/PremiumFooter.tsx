@@ -5,34 +5,6 @@ import Image from 'next/image';
 export default function PremiumFooter() {
   return (
     <footer className="relative overflow-hidden">
-      {/* Mega CTA Section Above Footer */}
-      <div className="bg-gradient-to-br from-brand-orange via-orange-600 to-red-600 py-20 px-4 relative">
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] bg-[length:250%_250%] animate-pulse"></div>
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="text-6xl mb-6">🏁</div>
-          <h3 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Ready to Get Started?
-          </h3>
-          <p className="text-2xl text-white/90 mb-8">
-            Your custom race suit is just one click away
-          </p>
-          <a
-            href="https://fervogear.com/custom-race-suit/?utm_source=landing&utm_medium=web&utm_campaign=Black_Friday_2025&utm_id=bf_sfi5_deal"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white text-brand-orange font-bold text-2xl px-16 py-6 rounded-2xl hover:scale-105 transition-transform shadow-2xl"
-          >
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5" />
-            </svg>
-            GET MY FREE DESIGN NOW
-          </a>
-          <p className="text-white/80 text-sm mt-6">
-            ✓ No credit card required • ✓ See mockup in 24 hours • ✓ Unlimited revisions
-          </p>
-        </div>
-      </div>
-
       {/* Main Footer */}
       <div className="bg-black border-t-4 border-brand-orange">
         <div className="max-w-7xl mx-auto px-4 py-16">
