@@ -20,9 +20,6 @@ export default function MockupsSlider() {
     { url: 'https://fervogear.com/wp-content/uploads/2023/07/10-Ryan-Claeys-E-New-10-copy.jpg', title: 'Custom Graphics', style: 'Detailed' },
     { url: 'https://fervogear.com/wp-content/uploads/2023/07/11-Wesley-Ashcraft.jpg', title: 'Racing Style', style: 'Modern' },
     { url: 'https://fervogear.com/wp-content/uploads/2023/07/12-Rich-Hervig-03-1-1.jpg', title: 'Classic Design', style: 'Traditional' },
-    { url: 'https://fervogear.com/wp-content/uploads/2024/03/Custom-Fire-Race-SFI-Suite.jpg', title: 'Fire Design', style: 'Custom Graphics' },
-    { url: 'https://fervogear.com/wp-content/uploads/2024/03/Custom-Fire-Racing-Fire-Suit-White-and-Black.jpg', title: 'Monochrome', style: 'Elegant' },
-    { url: 'https://fervogear.com/wp-content/uploads/2024/03/Custom-SFI-Certified-Racing-Fire-Suit.jpg', title: 'Race Ready', style: 'Pro Series' },
   ];
 
   // Auto-play functionality
