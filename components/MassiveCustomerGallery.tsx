@@ -68,9 +68,7 @@ export default function MassiveCustomerGallery() {
                 alt={`FervoGear Customer ${index + 1}`}
                 fill
                 className="object-cover object-top"
-                loading="lazy"
                 sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                quality={80}
               />
               {/* Overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
