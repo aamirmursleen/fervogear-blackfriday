@@ -109,21 +109,21 @@ export default function PremiumFooter() {
               <ul className="space-y-2 text-gray-400">
                 <li><a href="#customer-gallery" className="hover:text-brand-orange transition-colors">Customer Gallery</a></li>
                 <li><a href="#pdf-downloads" className="hover:text-brand-orange transition-colors">Design Mockups</a></li>
-                <li><a href="#" className="hover:text-brand-orange transition-colors">Pricing & Savings</a></li>
+                <li><a href="#pricing-section" className="hover:text-brand-orange transition-colors">Pricing & Savings</a></li>
                 <li><a href="#faq-section" className="hover:text-brand-orange transition-colors">FAQs</a></li>
-                <li><a href="tel:4094040962" className="hover:text-brand-orange transition-colors">Get Started</a></li>
+                <li><a href="https://fervogear.typeform.com/custom?utm_source=website&utm_medium=custom-race-suit-landing&utm_campaign=footer-quick-links" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors">Get Started</a></li>
               </ul>
             </div>
 
-            {/* Column 3: Learn More */}
+            {/* Column 3: Resources */}
             <div>
-              <h4 className="font-bold text-lg mb-4 text-brand-orange">Learn More</h4>
+              <h4 className="font-bold text-lg mb-4 text-brand-orange">Resources</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-brand-orange transition-colors">About FervoGear</a></li>
-                <li><a href="#" className="hover:text-brand-orange transition-colors">SFI Certification</a></li>
-                <li><a href="#pdf-downloads" className="hover:text-brand-orange transition-colors">Download Resources</a></li>
+                <li><a href="#pdf-downloads" className="hover:text-brand-orange transition-colors">Download PDFs</a></li>
+                <li><a href="https://fervogear.com/shipping-information/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors">Shipping Info</a></li>
+                <li><a href="https://status.fervogear.com/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors">System Status</a></li>
                 <li><a href="#customer-gallery" className="hover:text-brand-orange transition-colors">Real Customers</a></li>
-                <li><a href="#" className="hover:text-brand-orange transition-colors">Why Choose Us</a></li>
+                <li><a href="#" className="hover:text-brand-orange transition-colors">SFI Certification</a></li>
               </ul>
             </div>
 
@@ -195,13 +195,13 @@ export default function PremiumFooter() {
                 © {new Date().getFullYear()} FervoGear, LLC. All rights reserved.
               </div>
               <div className="flex flex-wrap gap-4 text-gray-500 text-sm">
-                <a href="#" className="hover:text-brand-orange transition-colors">Privacy Policy</a>
+                <a href="https://fervogear.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors">Privacy Policy</a>
                 <span className="text-gray-700">•</span>
-                <a href="#" className="hover:text-brand-orange transition-colors">Terms of Service</a>
+                <a href="https://fervogear.com/terms-and-conditions/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors">Terms of Service</a>
                 <span className="text-gray-700">•</span>
-                <a href="#" className="hover:text-brand-orange transition-colors">Shipping Policy</a>
+                <a href="https://fervogear.com/shipping-policy" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors">Shipping Policy</a>
                 <span className="text-gray-700">•</span>
-                <a href="#" className="hover:text-brand-orange transition-colors">Refund Policy</a>
+                <a href="https://fervogear.com/shipping-information/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors">Returns & Shipping</a>
               </div>
             </div>
 
