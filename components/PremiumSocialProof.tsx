@@ -44,57 +44,82 @@ export default function PremiumSocialProof() {
   return (
     <section className="py-24 px-4 bg-gradient-to-b from-gray-900 to-black">
       <div className="max-w-7xl mx-auto">
-        {/* Section header */}
-        <div className="text-center mb-16">
-          <h2 className="section-heading-premium mb-4">
-            Trusted by <span className="text-brand-orange">500+ Professional Racers</span>
+        {/* Section header - BIGGER */}
+        <div className="text-center mb-20">
+          <div className="inline-block mb-6">
+            <div className="bg-brand-orange/10 border border-brand-orange/30 rounded-full px-6 py-2 text-brand-orange font-semibold text-sm mb-6">
+              VERIFIED CUSTOMERS
+            </div>
+          </div>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+            Trusted by <span className="bg-gradient-to-r from-brand-orange via-orange-500 to-orange-600 bg-clip-text text-transparent">500+ Professional Racers</span>
           </h2>
-          <p className="section-subheading-premium max-w-3xl mx-auto">
+          <p className="text-2xl md:text-3xl text-gray-400 max-w-4xl mx-auto font-light leading-relaxed">
             From weekend warriors to championship winners, racers choose FervoGear for unmatched quality and service.
           </p>
         </div>
 
-        {/* Testimonials grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-20">
+        {/* Testimonials grid - BIGGER & BETTER */}
+        <div className="grid lg:grid-cols-2 gap-10 mb-20">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="premium-card flex flex-col md:flex-row gap-6"
+              className="group relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border-2 border-gray-800 rounded-3xl overflow-hidden hover:border-brand-orange/50 transition-all duration-500 hover:shadow-2xl hover:shadow-brand-orange/20 hover:-translate-y-2"
             >
-              {/* Image */}
-              <div className="relative w-full md:w-48 h-48 md:h-auto flex-shrink-0 rounded-xl overflow-hidden">
+              {/* Large Image - Takes more space */}
+              <div className="relative w-full h-80 lg:h-96 overflow-hidden">
                 <Image
                   src={testimonial.image}
                   alt={testimonial.name}
                   fill
-                  className="object-cover"
+                  className="object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+
+                {/* Floating badge */}
+                <div className="absolute top-6 right-6 bg-brand-orange/90 backdrop-blur-sm text-white px-4 py-2 rounded-full font-bold text-sm flex items-center gap-2 shadow-lg">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  Verified Customer
+                </div>
               </div>
 
-              {/* Content */}
-              <div className="flex-1 flex flex-col justify-between">
-                <div>
-                  {/* Rating */}
-                  <div className="flex gap-1 mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
+              {/* Content - Larger padding and text */}
+              <div className="p-8 lg:p-10">
+                {/* Rating - Bigger stars */}
+                <div className="flex gap-1 mb-5">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <svg key={i} className="w-7 h-7 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+
+                {/* Quote - Larger text */}
+                <p className="text-gray-200 text-xl lg:text-2xl mb-6 italic leading-relaxed font-light">
+                  "{testimonial.quote}"
+                </p>
+
+                {/* Author - Bigger and more prominent */}
+                <div className="flex items-center gap-4 pt-6 border-t border-gray-800">
+                  <div className="flex-1">
+                    <div className="font-bold text-2xl mb-1 text-white">{testimonial.name}</div>
+                    <div className="text-brand-orange text-base font-medium">{testimonial.role}</div>
                   </div>
 
-                  {/* Quote */}
-                  <p className="text-gray-300 mb-4 italic leading-relaxed">
-                    "{testimonial.quote}"
-                  </p>
-                </div>
-
-                {/* Author */}
-                <div>
-                  <div className="font-semibold text-lg">{testimonial.name}</div>
-                  <div className="text-brand-orange text-sm">{testimonial.role}</div>
+                  {/* Checkmark badge */}
+                  <div className="bg-green-500/20 border-2 border-green-500 rounded-full p-3">
+                    <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
                 </div>
               </div>
+
+              {/* Decorative corner accent */}
+              <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-brand-orange/20 to-transparent rounded-br-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           ))}
         </div>
