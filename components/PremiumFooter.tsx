@@ -1,3 +1,5 @@
+'use client';
+
 export default function PremiumFooter() {
   return (
     <footer className="relative overflow-hidden">
@@ -240,23 +242,13 @@ export default function PremiumFooter() {
       </div>
 
       {/* Black Friday Bottom Banner */}
-      <div className="bg-gradient-to-r from-brand-orange via-orange-600 to-brand-orange py-4 animate-pulse-slow">
+      <div className="bg-gradient-to-r from-brand-orange via-orange-600 to-brand-orange py-4 animate-pulse">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="text-white font-bold text-lg">
             🔥 BLACK FRIDAY: Save $451 + FREE Gloves • Limited to 47 Orders • Ends Sunday 11:59 PM PST 🔥
           </p>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes pulse-slow {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.95; }
-        }
-        .animate-pulse-slow {
-          animation: pulse-slow 3s ease-in-out infinite;
-        }
-      `}</style>
     </footer>
   );
 }
