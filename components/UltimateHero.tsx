@@ -38,13 +38,13 @@ export default function UltimateHero() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Ultimate Copy */}
           <div className="space-y-8 text-center lg:text-left">
-            {/* Pulsing badge */}
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-brand-orange to-orange-600 rounded-full px-6 py-3 shadow-2xl animate-bounce-slow">
-              <span className="relative flex h-4 w-4">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-4 w-4 bg-white"></span>
+            {/* Clean badge */}
+            <div className="inline-flex items-center gap-3 bg-brand-orange/10 border-2 border-brand-orange/30 rounded-full px-6 py-3 backdrop-blur-sm">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-brand-orange"></span>
               </span>
-              <span className="text-white font-bold text-sm tracking-wide">BLACK FRIDAY EXCLUSIVE - SAVE $451</span>
+              <span className="text-brand-orange font-bold text-sm tracking-wide">LIMITED BLACK FRIDAY OFFER</span>
             </div>
 
             {/* Massive headline with gradient */}
@@ -144,25 +144,8 @@ export default function UltimateHero() {
             </div>
           </div>
 
-          {/* Right: Hero Image with Price Tag */}
+          {/* Right: Hero Image */}
           <div className="relative">
-            {/* Floating price explosion */}
-            <div className="absolute -top-8 -right-8 z-20 animate-bounce-slow">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-brand-orange to-red-500 rounded-3xl blur-2xl opacity-60"></div>
-                <div className="relative bg-gradient-to-br from-brand-orange via-orange-600 to-red-500 rounded-3xl p-8 shadow-2xl transform rotate-6 hover:rotate-0 transition-transform">
-                  <div className="text-center">
-                    <div className="text-white/90 font-bold text-sm mb-1">BLACK FRIDAY</div>
-                    <div className="text-6xl font-black text-white mb-1">$451</div>
-                    <div className="text-white/90 font-bold text-lg">OFF</div>
-                    <div className="mt-3 pt-3 border-t border-white/30">
-                      <div className="text-white/80 text-xs">+ FREE Gloves</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Main hero image */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
               <div className="relative aspect-[3/4]">
