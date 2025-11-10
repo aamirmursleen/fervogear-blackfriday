@@ -19,11 +19,11 @@ export default function FreeDesignCTA() {
 
           {/* Headline */}
           <h2 className="section-heading-premium mb-4">
-            Get a <span className="text-brand-orange">FREE</span> Design from Your Dedicated Designer
+            Get a <span className="text-brand-orange">FREE</span> Design from Our Dedicated Designer
           </h2>
 
           <p className="section-subheading-premium max-w-3xl mx-auto">
-            Fill out our <span className="text-brand-orange font-semibold">30-second form</span> and get paired with your dedicated graphic designer. Work together via call, text, or email until your design is absolutely perfect.
+            Fill out our <span className="text-brand-orange font-semibold">30-second form</span> and get paired with our dedicated graphic designer. Work together via call, text, or email until your design is absolutely perfect.
             <span className="block mt-4 text-white font-semibold">No payment. No credit card. See your exact suit before you buy.</span>
           </p>
 
@@ -42,7 +42,7 @@ export default function FreeDesignCTA() {
                 <span className="text-3xl font-bold text-brand-orange">2</span>
               </div>
               <h3 className="text-xl font-semibold">Dedicated Designer</h3>
-              <p className="text-gray-400 text-sm">Get paired with your personal graphic designer. Work together via call, text, or email.</p>
+              <p className="text-gray-400 text-sm">Get paired with our professional graphic designer. Work together via call, text, or email.</p>
             </div>
 
             <div className="space-y-4">
