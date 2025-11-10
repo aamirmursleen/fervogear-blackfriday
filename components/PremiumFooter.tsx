@@ -131,27 +131,27 @@ export default function PremiumFooter() {
               </div>
             </div>
 
-            {/* Column 2: Company */}
+            {/* Column 2: Quick Links */}
             <div>
-              <h4 className="font-bold text-lg mb-4 text-brand-orange">Company</h4>
+              <h4 className="font-bold text-lg mb-4 text-brand-orange">Quick Links</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-brand-orange transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-brand-orange transition-colors">Meet the Drivers</a></li>
-                <li><a href="#" className="hover:text-brand-orange transition-colors">Sponsorship</a></li>
-                <li><a href="#" className="hover:text-brand-orange transition-colors">News & Blog</a></li>
-                <li><a href="#" className="hover:text-brand-orange transition-colors">Dealer Wanted</a></li>
+                <li><a href="#customer-gallery" className="hover:text-brand-orange transition-colors">Customer Gallery</a></li>
+                <li><a href="#pdf-downloads" className="hover:text-brand-orange transition-colors">Design Mockups</a></li>
+                <li><a href="#" className="hover:text-brand-orange transition-colors">Pricing & Savings</a></li>
+                <li><a href="#faq-section" className="hover:text-brand-orange transition-colors">FAQs</a></li>
+                <li><a href="tel:4094040962" className="hover:text-brand-orange transition-colors">Get Started</a></li>
               </ul>
             </div>
 
-            {/* Column 3: Support */}
+            {/* Column 3: Learn More */}
             <div>
-              <h4 className="font-bold text-lg mb-4 text-brand-orange">Support</h4>
+              <h4 className="font-bold text-lg mb-4 text-brand-orange">Learn More</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-brand-orange transition-colors">FAQs</a></li>
-                <li><a href="#" className="hover:text-brand-orange transition-colors">Size Chart</a></li>
-                <li><a href="#" className="hover:text-brand-orange transition-colors">Shipping Info</a></li>
-                <li><a href="#" className="hover:text-brand-orange transition-colors">Returns</a></li>
-                <li><a href="#" className="hover:text-brand-orange transition-colors">Contact</a></li>
+                <li><a href="#" className="hover:text-brand-orange transition-colors">About FervoGear</a></li>
+                <li><a href="#" className="hover:text-brand-orange transition-colors">SFI Certification</a></li>
+                <li><a href="#pdf-downloads" className="hover:text-brand-orange transition-colors">Download Resources</a></li>
+                <li><a href="#customer-gallery" className="hover:text-brand-orange transition-colors">Real Customers</a></li>
+                <li><a href="#" className="hover:text-brand-orange transition-colors">Why Choose Us</a></li>
               </ul>
             </div>
 

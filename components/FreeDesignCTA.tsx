@@ -19,12 +19,12 @@ export default function FreeDesignCTA() {
 
           {/* Headline */}
           <h2 className="section-heading-premium mb-4">
-            Start With a <span className="text-brand-orange">FREE</span> Design
+            Get a <span className="text-brand-orange">FREE</span> Design from Your Dedicated Designer
           </h2>
 
           <p className="section-subheading-premium max-w-3xl mx-auto">
-            No credit card. No commitment. Just share your vision and we'll create a professional 3D mockup of your custom race suit.
-            <span className="block mt-4 text-white font-semibold">See exactly what you're getting before you spend a dollar.</span>
+            Fill out our <span className="text-brand-orange font-semibold">30-second form</span> and get paired with your dedicated graphic designer. Work together via call, text, or email until your design is absolutely perfect.
+            <span className="block mt-4 text-white font-semibold">No payment. No credit card. See your exact suit before you buy.</span>
           </p>
 
           {/* Process steps */}
@@ -33,24 +33,24 @@ export default function FreeDesignCTA() {
               <div className="w-16 h-16 bg-brand-orange/10 rounded-xl flex items-center justify-center mx-auto">
                 <span className="text-3xl font-bold text-brand-orange">1</span>
               </div>
-              <h3 className="text-xl font-semibold">Share Your Vision</h3>
-              <p className="text-gray-400 text-sm">Tell us your colors, logos, sponsors, and style preferences in 2 minutes</p>
+              <h3 className="text-xl font-semibold">30-Second Form</h3>
+              <p className="text-gray-400 text-sm">Quick form to share your vision: colors, logos, sponsors, style preferences</p>
             </div>
 
             <div className="space-y-4">
               <div className="w-16 h-16 bg-brand-orange/10 rounded-xl flex items-center justify-center mx-auto">
                 <span className="text-3xl font-bold text-brand-orange">2</span>
               </div>
-              <h3 className="text-xl font-semibold">Get FREE Mockup</h3>
-              <p className="text-gray-400 text-sm">Receive a professional 3D design within 24-48 hours. No payment needed.</p>
+              <h3 className="text-xl font-semibold">Dedicated Designer</h3>
+              <p className="text-gray-400 text-sm">Get paired with your personal graphic designer. Work together via call, text, or email.</p>
             </div>
 
             <div className="space-y-4">
               <div className="w-16 h-16 bg-brand-orange/10 rounded-xl flex items-center justify-center mx-auto">
                 <span className="text-3xl font-bold text-brand-orange">3</span>
               </div>
-              <h3 className="text-xl font-semibold">Love It, Then Buy</h3>
-              <p className="text-gray-400 text-sm">Make unlimited changes. Only pay when you're 100% satisfied.</p>
+              <h3 className="text-xl font-semibold">Unlimited Revisions</h3>
+              <p className="text-gray-400 text-sm">Request changes until perfect. Only pay when you're 100% satisfied with the design.</p>
             </div>
           </div>
 
@@ -85,7 +85,7 @@ export default function FreeDesignCTA() {
           </a>
 
           <p className="text-gray-500 mt-6 text-sm">
-            🔒 Your information is secure • ⚡ Takes less than 2 minutes • 💯 Zero risk
+            🔒 Secure • ⚡ 30 seconds to complete • 📞 Work directly with your designer via call/text/email • 💯 Zero risk
           </p>
 
           {/* Social proof */}
