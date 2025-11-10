@@ -18,11 +18,11 @@ export default function UltimateHero() {
     'https://fervogear.com/wp-content/uploads/2024/08/Driver-Wearing-FervoGear-Suit-13.jpg',
   ];
 
-  // Auto-slide every 3 seconds
+  // Auto-slide every 2 seconds - faster, more engaging!
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % heroImages.length);
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [heroImages.length]);
@@ -173,7 +173,7 @@ export default function UltimateHero() {
                 {heroImages.map((image, index) => (
                   <div
                     key={index}
-                    className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+                    className={`absolute inset-0 transition-all duration-700 ease-in-out ${
                       index === currentImage
                         ? 'opacity-100 scale-100 z-10'
                         : 'opacity-0 scale-105 z-0'
