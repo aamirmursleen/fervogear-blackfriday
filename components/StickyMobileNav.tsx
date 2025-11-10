@@ -9,7 +9,7 @@ export default function StickyMobileNav() {
     {
       id: 'home',
       icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
       ),
@@ -19,7 +19,7 @@ export default function StickyMobileNav() {
     {
       id: 'designs',
       icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
       ),
@@ -29,8 +29,8 @@ export default function StickyMobileNav() {
     {
       id: 'cta',
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5" />
+        <svg className="w-6 h-6 md:w-7 md:h-7 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
         </svg>
       ),
       label: 'Design',
@@ -40,7 +40,7 @@ export default function StickyMobileNav() {
     {
       id: 'contact',
       icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
         </svg>
       ),
@@ -69,43 +69,49 @@ export default function StickyMobileNav() {
   };
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-      {/* Compact backdrop blur bar */}
+    <nav className="fixed bottom-0 left-0 right-0 z-50">
+      {/* Beautiful backdrop blur bar - Mobile & Desktop */}
       <div className="bg-black/90 backdrop-blur-xl border-t border-gray-800 shadow-2xl">
-        <div className="flex items-end justify-around px-1 py-1.5 safe-bottom">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => handleClick(item)}
-              className={`relative flex flex-col items-center justify-center gap-0.5 min-w-[60px] py-1.5 rounded-lg transition-all duration-300 ${
-                item.isMainCTA
-                  ? 'bg-gradient-to-r from-brand-orange to-orange-600 text-white scale-105 -mt-6 px-4 py-2 shadow-lg shadow-brand-orange/50'
-                  : activeSection === item.id
-                  ? 'text-brand-orange'
-                  : 'text-gray-400 active:text-white'
-              }`}
-            >
-              {/* Pulse effect for main CTA */}
-              {item.isMainCTA && (
-                <div className="absolute inset-0 bg-brand-orange rounded-lg animate-ping opacity-20"></div>
-              )}
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-end justify-center md:justify-around px-1 md:px-8 py-1.5 md:py-3 safe-bottom gap-2 md:gap-4">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => handleClick(item)}
+                className={`group relative flex flex-col items-center justify-center gap-0.5 md:gap-1 min-w-[60px] md:min-w-[80px] py-1.5 md:py-2 rounded-lg md:rounded-xl transition-all duration-300 ${
+                  item.isMainCTA
+                    ? 'bg-gradient-to-r from-brand-orange to-orange-600 text-white scale-105 md:scale-110 -mt-6 md:-mt-8 px-4 md:px-6 py-2 md:py-3 shadow-lg shadow-brand-orange/50 hover:scale-110 md:hover:scale-[1.15]'
+                    : activeSection === item.id
+                    ? 'text-brand-orange'
+                    : 'text-gray-400 hover:text-white active:text-white'
+                }`}
+              >
+                {/* Pulse effect for main CTA */}
+                {item.isMainCTA && (
+                  <>
+                    <div className="absolute inset-0 bg-brand-orange rounded-lg md:rounded-xl animate-ping opacity-20"></div>
+                    {/* Shimmer effect on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-lg md:rounded-xl"></div>
+                  </>
+                )}
 
-              {/* Icon - smaller */}
-              <div className="relative">
-                {item.icon}
-              </div>
+                {/* Icon with animation */}
+                <div className="relative">
+                  {item.icon}
+                </div>
 
-              {/* Label - smaller text */}
-              <span className={`text-[10px] font-semibold leading-tight ${item.isMainCTA ? 'text-white' : ''}`}>
-                {item.label}
-              </span>
+                {/* Label */}
+                <span className={`text-[10px] md:text-xs font-semibold leading-tight ${item.isMainCTA ? 'text-white' : ''}`}>
+                  {item.label}
+                </span>
 
-              {/* Active indicator */}
-              {!item.isMainCTA && activeSection === item.id && (
-                <div className="absolute -bottom-0.5 w-6 h-0.5 bg-brand-orange rounded-full"></div>
-              )}
-            </button>
-          ))}
+                {/* Active indicator */}
+                {!item.isMainCTA && activeSection === item.id && (
+                  <div className="absolute -bottom-0.5 w-6 md:w-8 h-0.5 md:h-1 bg-brand-orange rounded-full"></div>
+                )}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </nav>

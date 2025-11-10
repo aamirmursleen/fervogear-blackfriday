@@ -22,7 +22,7 @@ import PremiumFooter from '@/components/PremiumFooter';
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative pb-20 md:pb-0">
+    <main className="min-h-screen relative pb-20 md:pb-24">
       {/* Sticky countdown timer */}
       <PremiumCountdown />
 
