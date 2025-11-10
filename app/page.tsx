@@ -1,54 +1,46 @@
-import CountdownTimer from '@/components/CountdownTimer';
-import Hero from '@/components/Hero';
+import PremiumCountdown from '@/components/PremiumCountdown';
+import PremiumHero from '@/components/PremiumHero';
+import FreeDesignCTA from '@/components/FreeDesignCTA';
+import VideoTestimonials from '@/components/VideoTestimonials';
+import PremiumBenefits from '@/components/PremiumBenefits';
+import PremiumSocialProof from '@/components/PremiumSocialProof';
 import ValueStack from '@/components/ValueStack';
-import Benefits from '@/components/Benefits';
-import Scarcity from '@/components/Scarcity';
-import DriverGallery from '@/components/DriverGallery';
-import MockupGallery from '@/components/MockupGallery';
 import Process from '@/components/Process';
-import Features from '@/components/Features';
-import Support from '@/components/Support';
-import FinalCTA from '@/components/FinalCTA';
-import Footer from '@/components/Footer';
+import PremiumFinalCTA from '@/components/PremiumFinalCTA';
+import PremiumFooter from '@/components/PremiumFooter';
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen relative">
       {/* Sticky countdown timer */}
-      <CountdownTimer />
+      <PremiumCountdown />
 
-      {/* Hero section with main offer */}
-      <Hero />
+      {/* Premium hero section */}
+      <PremiumHero />
 
-      {/* Value stack - what they get */}
+      {/* FREE Design CTA - Lead with low commitment */}
+      <FreeDesignCTA />
+
+      {/* Video testimonials - Social proof early */}
+      <VideoTestimonials />
+
+      {/* Value stack - Show what they get */}
       <ValueStack />
 
-      {/* Scarcity/urgency section */}
-      <Scarcity />
-
-      {/* Benefits - why choose FervoGear */}
-      <Benefits />
-
-      {/* Real drivers social proof */}
-      <DriverGallery />
-
-      {/* Custom design mockups */}
-      <MockupGallery />
-
-      {/* Features grid */}
-      <Features />
+      {/* Benefits - Why FervoGear */}
+      <PremiumBenefits />
 
       {/* 5-step process */}
       <Process />
 
-      {/* Customer support */}
-      <Support />
+      {/* Social proof gallery */}
+      <PremiumSocialProof />
 
       {/* Final CTA */}
-      <FinalCTA />
+      <PremiumFinalCTA />
 
       {/* Footer */}
-      <Footer />
+      <PremiumFooter />
     </main>
   );
 }

@@ -6,22 +6,64 @@
   body {
     @apply bg-black text-white antialiased;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer components {
-  .cta-button {
-    @apply bg-brand-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  /* Premium CTA Buttons */
+  .cta-button-premium {
+    @apply relative overflow-hidden bg-gradient-to-r from-brand-orange to-orange-600 text-white font-semibold py-5 px-10 rounded-xl text-lg transition-all duration-500 shadow-2xl hover:shadow-orange-500/50 hover:scale-[1.02];
   }
 
-  .cta-button-secondary {
-    @apply border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300;
+  .cta-button-premium::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000;
   }
 
-  .section-heading {
-    @apply text-4xl md:text-5xl font-bold mb-6 text-white;
+  .cta-button-outline {
+    @apply border-2 border-brand-orange/50 text-white hover:border-brand-orange hover:bg-brand-orange/10 font-semibold py-5 px-10 rounded-xl text-lg transition-all duration-300 backdrop-blur-sm;
   }
 
-  .section-subheading {
-    @apply text-xl md:text-2xl text-gray-300 mb-8;
+  /* Premium Section Headings */
+  .section-heading-premium {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent leading-tight;
+  }
+
+  .section-subheading-premium {
+    @apply text-xl md:text-2xl lg:text-3xl text-gray-400 mb-12 font-light tracking-wide;
+  }
+
+  /* Premium Card */
+  .premium-card {
+    @apply bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-8 transition-all duration-500 hover:border-brand-orange/50 hover:shadow-2xl hover:shadow-brand-orange/10 hover:-translate-y-1;
+  }
+
+  /* Smooth Reveal Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  /* Glowing Effect */
+  .glow-orange {
+    box-shadow: 0 0 40px rgba(255, 107, 0, 0.3);
+  }
+
+  /* Video Container */
+  .video-container {
+    @apply relative w-full rounded-2xl overflow-hidden shadow-2xl;
   }
 }
