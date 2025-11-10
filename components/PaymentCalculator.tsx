@@ -93,7 +93,7 @@ export default function PaymentCalculator() {
               key={index}
               className={`group relative bg-gradient-to-br from-gray-900 to-black border-2 rounded-3xl p-8 transition-all duration-500 hover:-translate-y-2 ${
                 index === 0
-                  ? 'border-green-500 shadow-2xl shadow-green-500/20 scale-105'
+                  ? 'border-green-500 shadow-2xl shadow-green-500/20 scale-105 animate-pulse-border'
                   : 'border-gray-800 hover:border-green-500/50 hover:shadow-2xl hover:shadow-green-500/10'
               }`}
             >
@@ -135,18 +135,44 @@ export default function PaymentCalculator() {
                   </div>
                 </div>
 
-                {/* CTA Button */}
+                {/* CTA Button with Animation */}
                 <a
                   href="https://fervogear.com/custom-race-suit/?utm_source=landing&utm_medium=web&utm_campaign=Black_Friday_2025&utm_id=bf_sfi5_deal"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`block w-full py-3 rounded-xl font-bold transition-all duration-300 ${
+                  className={`relative block w-full py-4 rounded-xl font-bold transition-all duration-300 overflow-hidden group/btn ${
                     index === 0
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:scale-105 shadow-lg'
-                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
+                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg hover:shadow-green-500/50'
+                      : 'bg-gray-800 text-gray-300 hover:bg-gradient-to-r hover:from-brand-orange hover:to-orange-600 hover:text-white'
                   }`}
                 >
-                  Select Plan
+                  {/* Shimmer effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
+
+                  {/* Button text */}
+                  <span className="relative flex items-center justify-center gap-2">
+                    {index === 0 ? (
+                      <>
+                        <svg className="w-5 h-5 group-hover/btn:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        START FREE DESIGN
+                        <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </>
+                    ) : (
+                      <>
+                        <svg className="w-5 h-5 group-hover/btn:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5" />
+                        </svg>
+                        GET STARTED FREE
+                        <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </>
+                    )}
+                  </span>
                 </a>
               </div>
 
@@ -226,11 +252,26 @@ export default function PaymentCalculator() {
         <div className="mt-12 text-center">
           <p className="text-gray-500 text-sm mb-4">Powered by trusted payment partners</p>
           <div className="flex items-center justify-center gap-8 flex-wrap">
-            <div className="text-blue-500 font-bold text-2xl">Affirm</div>
-            <div className="text-pink-500 font-bold text-2xl">Klarna</div>
+            <div className="text-blue-500 font-bold text-2xl hover:scale-110 transition-transform cursor-pointer">Affirm</div>
+            <div className="text-pink-500 font-bold text-2xl hover:scale-110 transition-transform cursor-pointer">Klarna</div>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes pulse-border {
+          0%, 100% {
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+          }
+          50% {
+            box-shadow: 0 0 40px rgba(34, 197, 94, 0.6);
+          }
+        }
+
+        .animate-pulse-border {
+          animation: pulse-border 2s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 }
