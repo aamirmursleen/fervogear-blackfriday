@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "command": "bash .claude/scripts/validate-bash.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "deny": [
+      "Read(node_modules/)",
+      "Read(.next/)",
+      "Read(dist/)",
+      "Read(build/)",
+      "Read(.git/objects/)",
+      "Read(.git/logs/)",
+      "Read(__pycache__/)",
+      "Read(coverage/)"
+    ]
+  }
+}
