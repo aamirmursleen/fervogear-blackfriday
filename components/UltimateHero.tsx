@@ -243,18 +243,19 @@ export default function UltimateHero() {
                 </div>
               </div>
 
-              {/* Floating price badge on image */}
+              {/* Floating price badge on image - Clickable */}
               <div className="absolute bottom-6 left-6 right-6 space-y-3 z-20">
-                <div className="bg-black/80 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
+                <a
+                  href={CTA_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-black/80 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 cursor-pointer group"
+                >
                   <div className="flex items-center justify-between mb-3">
                     <div>
                       <div className="text-gray-400 text-sm flex items-center gap-2">
                         Total Value: $1,599.95
-                        <a
-                          href="#pricing-section"
-                          className="relative text-brand-orange hover:text-orange-500 transition-colors group"
-                          aria-label="See pricing details"
-                        >
+                        <span className="relative text-brand-orange group-hover:text-orange-500 transition-colors">
                           {/* Pulsing ring around icon */}
                           <span className="absolute inset-0 rounded-full bg-brand-orange/30 animate-ping"></span>
 
@@ -262,19 +263,19 @@ export default function UltimateHero() {
                           <svg className="w-4 h-4 relative z-10 animate-bounce-slow group-hover:scale-125 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
-                        </a>
+                        </span>
                       </div>
-                      <div className="text-4xl font-bold text-brand-orange">$899</div>
+                      <div className="text-4xl font-bold text-brand-orange group-hover:text-orange-500 transition-colors">$899</div>
                       <div className="text-gray-500 text-sm">Limited Time Offer</div>
                     </div>
-                    <div className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold text-center">
+                    <div className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold text-center group-hover:bg-green-600 transition-colors">
                       <div className="text-xs">SAVE</div>
                       <div className="text-xl">$700.95</div>
                     </div>
                   </div>
 
                   {/* FREE Items Badge */}
-                  <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl px-4 py-2 mb-2">
+                  <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl px-4 py-2 mb-2 group-hover:from-green-600 group-hover:to-emerald-600 transition-all">
                     <div className="flex items-center justify-center gap-2 text-sm font-bold">
                       <span>🎁</span>
                       <span>FREE Gloves + Shoes ($400 Value)</span>
@@ -282,10 +283,13 @@ export default function UltimateHero() {
                     </div>
                   </div>
 
-                  <div className="text-yellow-400 font-semibold text-sm">
-                    ⚠️ Limited to 47 suits • 15 remaining
+                  <div className="text-yellow-400 font-semibold text-sm flex items-center justify-center gap-2">
+                    <span>⚠️ Limited to 47 suits • 15 remaining</span>
+                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
 
