@@ -5,9 +5,6 @@ import { useState } from 'react';
 export default function InteractiveFAQ() {
   const [activeTab, setActiveTab] = useState<string>('general');
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const [chatMessages, setChatMessages] = useState<Array<{role: 'user' | 'assistant', content: string}>>([]);
-  const [userInput, setUserInput] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
   const [showChat, setShowChat] = useState(false);
 
   const departments = [
@@ -56,41 +53,6 @@ export default function InteractiveFAQ() {
     ],
   };
 
-  const handleAIChat = async () => {
-    if (!userInput.trim()) return;
-
-    const userMessage = { role: 'user' as const, content: userInput };
-    setChatMessages(prev => [...prev, userMessage]);
-    setUserInput('');
-    setIsLoading(true);
-
-    try {
-      // Call our secure server-side API (protects API key!)
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          messages: [...chatMessages, userMessage]
-        }),
-      });
-
-      const data = await response.json();
-
-      if (data.error) {
-        throw new Error(data.error);
-      }
-
-      const aiMessage = { role: 'assistant' as const, content: data.message };
-      setChatMessages(prev => [...prev, aiMessage]);
-    } catch (error) {
-      setChatMessages(prev => [...prev, { role: 'assistant', content: 'Sorry, I encountered an error. Please call us at (409) 404-0962 for immediate assistance!' }]);
-    }
-
-    setIsLoading(false);
-  };
-
   const currentFAQs = faqsByDepartment[activeTab] || [];
 
   return (
@@ -137,9 +99,8 @@ export default function InteractiveFAQ() {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Left: FAQs */}
-          <div className="lg:col-span-2">
+        {/* FAQs - Full Width */}
+        <div className="max-w-4xl mx-auto">
             <div className="bg-gray-900/50 border border-gray-800 rounded-3xl p-6">
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
                 {departments.find(d => d.id === activeTab)?.icon}
@@ -176,98 +137,10 @@ export default function InteractiveFAQ() {
             </div>
           </div>
 
-          {/* Right: AI Chatbot */}
-          <div className="lg:col-span-1">
-            <div className="sticky top-24 bg-gradient-to-br from-gray-900 to-black border-2 border-brand-orange/50 rounded-3xl p-6 shadow-2xl glow-orange">
-              <div className="text-center mb-6">
-                <div className="text-5xl mb-3 animate-bounce">🤖</div>
-                <h3 className="text-2xl font-bold mb-2">Ask Our AI</h3>
-                <p className="text-gray-400 text-sm">Get instant answers to any question</p>
-              </div>
-
-              {/* Chat Messages */}
-              <div className="bg-black/60 rounded-2xl p-4 mb-4 h-64 overflow-y-auto space-y-3">
-                {chatMessages.length === 0 ? (
-                  <div className="text-center text-gray-500 text-sm py-8">
-                    <p>👋 Hi! I'm your FervoGear AI assistant.</p>
-                    <p className="mt-2">Ask me anything about our custom race suits!</p>
-                  </div>
-                ) : (
-                  chatMessages.map((msg, i) => (
-                    <div
-                      key={i}
-                      className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
-                    >
-                      <div
-                        className={`max-w-[80%] px-4 py-2 rounded-2xl ${
-                          msg.role === 'user'
-                            ? 'bg-brand-orange text-white'
-                            : 'bg-gray-800 text-gray-200'
-                        }`}
-                      >
-                        <p className="text-sm leading-relaxed">{msg.content}</p>
-                      </div>
-                    </div>
-                  ))
-                )}
-                {isLoading && (
-                  <div className="flex justify-start">
-                    <div className="bg-gray-800 px-4 py-2 rounded-2xl">
-                      <div className="flex gap-1">
-                        <div className="w-2 h-2 bg-brand-orange rounded-full animate-bounce"></div>
-                        <div className="w-2 h-2 bg-brand-orange rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                        <div className="w-2 h-2 bg-brand-orange rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Input */}
-              <div className="flex gap-2">
-                <input
-                  type="text"
-                  value={userInput}
-                  onChange={(e) => setUserInput(e.target.value)}
-                  onKeyPress={(e) => e.key === 'Enter' && handleAIChat()}
-                  placeholder="Ask anything..."
-                  className="flex-1 bg-black/60 border border-gray-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:border-brand-orange focus:outline-none transition-colors"
-                />
-                <button
-                  onClick={handleAIChat}
-                  disabled={isLoading || !userInput.trim()}
-                  className="bg-gradient-to-r from-brand-orange to-orange-600 text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 transition-transform disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                  </svg>
-                </button>
-              </div>
-
-              {/* Quick questions */}
-              <div className="mt-4 space-y-2">
-                <p className="text-gray-500 text-xs mb-2">Quick questions:</p>
-                {['How much does a suit cost?', 'How long is delivery?', 'Is customization free?'].map((q, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setUserInput(q)}
-                    className="w-full text-left text-sm bg-gray-800/50 hover:bg-gray-800 text-gray-400 hover:text-white px-3 py-2 rounded-lg transition-all"
-                  >
-                    {q}
-                  </button>
-                ))}
-              </div>
-
-              {/* CTA */}
-              <div className="mt-6 pt-6 border-t border-gray-800">
-                <a
-                  href="tel:4094040962"
-                  className="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-xl text-center transition-all hover:scale-105"
-                >
-                  📞 Or Call: (409) 404-0962
-                </a>
-              </div>
-            </div>
+          {/* Note about AI Chatbot */}
+          <div className="mt-8 text-center">
+            <p className="text-gray-400 mb-4">💡 Want instant AI-powered answers?</p>
+            <p className="text-gray-500 text-sm">Scroll down to find our AI Assistant section for real-time help!</p>
           </div>
         </div>
       </div>
