@@ -89,9 +89,9 @@ export default function StickyMobileNav() {
                 {/* Pulse effect for main CTA */}
                 {item.isMainCTA && (
                   <>
-                    <div className="absolute inset-0 bg-brand-orange rounded-lg md:rounded-xl animate-ping opacity-20"></div>
+                    <div className="absolute inset-0 bg-brand-orange rounded-lg md:rounded-xl animate-ping opacity-20 pointer-events-none"></div>
                     {/* Shimmer effect on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-lg md:rounded-xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-lg md:rounded-xl pointer-events-none"></div>
                   </>
                 )}
 
