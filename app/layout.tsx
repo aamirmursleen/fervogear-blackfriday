@@ -74,7 +74,8 @@ export default function RootLayout({
         {/* Facebook Pixel */}
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
-            if (!window.fbq) {
+            // Prevent double initialization
+            if (!window._fbPixelInitialized) {
               !function(f,b,e,v,n,t,s)
               {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
               n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -85,6 +86,7 @@ export default function RootLayout({
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('init', '921267035733504');
               fbq('track', 'PageView');
+              window._fbPixelInitialized = true;
             }
           `}
         </Script>
