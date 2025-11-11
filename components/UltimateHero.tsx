@@ -83,7 +83,7 @@ export default function UltimateHero() {
             {/* Social proof pills */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               {[
-                { icon: '⭐', text: '4.9/5 Rating', subtext: '500+ Reviews' },
+                { icon: '⭐', text: '4.9/5 Rating', subtext: '1015+ Reviews' },
                 { icon: '🏆', text: 'SFI Certified', subtext: 'Industry Standard' },
                 { icon: '⚡', text: '3.5 Weeks', subtext: 'Fastest Delivery' },
               ].map((badge, i) => (

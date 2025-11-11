@@ -104,7 +104,7 @@ export default function PainSolution() {
               Experience the FervoGear Difference
             </h3>
             <p className="text-white/90 text-xl mb-8">
-              Join 500+ racers who made the switch and never looked back
+              Join 1,015+ racers who made the switch and never looked back
             </p>
             <a
               href="https://fervogear.com/custom-race-suit/?utm_source=landing&utm_medium=web&utm_campaign=Black_Friday_2025&utm_id=bf_sfi5_deal"

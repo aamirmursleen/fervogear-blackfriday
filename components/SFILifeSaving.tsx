@@ -87,7 +87,7 @@ export default function SFILifeSaving() {
           {/* Social Proof */}
           <div className="bg-green-500/10 border border-green-500/30 rounded-2xl p-6 mb-8">
             <p className="text-center text-xl text-gray-300 leading-relaxed">
-              <span className="text-green-400 font-bold">500+ professional racers</span> trust their lives to FervoGear USA SFI-5 suits.
+              <span className="text-green-400 font-bold">1,015+ professional racers</span> trust their lives to FervoGear USA SFI-5 suits.
               <span className="block mt-2 text-white font-semibold">They choose safety. You should too.</span>
             </p>
           </div>

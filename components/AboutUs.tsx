@@ -59,8 +59,8 @@ export default function AboutUs() {
                 <div className="text-gray-500 text-xs">Years Experience</div>
               </div>
               <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-brand-orange mb-1">500+</div>
-                <div className="text-gray-500 text-xs">Suits Made</div>
+                <div className="text-3xl font-bold text-brand-orange mb-1">1015+</div>
+                <div className="text-gray-500 text-xs">Suits & Counting</div>
               </div>
               <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-4 text-center">
                 <div className="text-3xl font-bold text-brand-orange mb-1">100%</div>

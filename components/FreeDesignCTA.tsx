@@ -100,8 +100,8 @@ export default function FreeDesignCTA() {
                   ))}
                 </div>
                 <div className="text-left">
-                  <div className="text-sm font-semibold">500+ Racers</div>
-                  <div className="text-xs text-gray-500">Already designed their suits</div>
+                  <div className="text-sm font-semibold">1,015+ Racers</div>
+                  <div className="text-xs text-gray-500">Suits delivered & counting</div>
                 </div>
               </div>
 

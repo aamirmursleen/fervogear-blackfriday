@@ -52,7 +52,7 @@ export default function PremiumSocialProof() {
             </div>
           </div>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-            Trusted by <span className="bg-gradient-to-r from-brand-orange via-orange-500 to-orange-600 bg-clip-text text-transparent">500+ Professional Racers</span>
+            Trusted by <span className="bg-gradient-to-r from-brand-orange via-orange-500 to-orange-600 bg-clip-text text-transparent">1,015+ Professional Racers</span>
           </h2>
           <p className="text-2xl md:text-3xl text-gray-400 max-w-4xl mx-auto font-light leading-relaxed">
             From weekend warriors to championship winners, racers choose FervoGear for unmatched quality and service.

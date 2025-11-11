@@ -104,7 +104,7 @@ export default function VideoTestimonials() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-2xl p-8">
           <div className="text-center">
             <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-brand-orange to-orange-600 bg-clip-text text-transparent mb-2">
-              500+
+              1,015+
             </div>
             <div className="text-gray-400 text-sm">Suits Delivered</div>
           </div>

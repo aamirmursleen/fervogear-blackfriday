@@ -49,7 +49,7 @@ export default function MassiveCustomerGallery() {
             REAL CUSTOMERS • REAL RESULTS
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Join <span className="bg-gradient-to-r from-brand-orange to-orange-600 bg-clip-text text-transparent">500+ Racers</span> Worldwide
+            Join <span className="bg-gradient-to-r from-brand-orange to-orange-600 bg-clip-text text-transparent">1,015+ Happy Racers</span> Worldwide
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             From weekend warriors to professional champions, racers trust FervoGear for safety, style, and performance

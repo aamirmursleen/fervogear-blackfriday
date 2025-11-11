@@ -147,8 +147,8 @@ export default function PremiumFooter() {
           {/* Stats Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 p-8 bg-gray-900/50 rounded-2xl">
             <div className="text-center">
-              <div className="text-4xl font-bold text-brand-orange mb-1">500+</div>
-              <div className="text-gray-500 text-sm">Custom Suits Made</div>
+              <div className="text-4xl font-bold text-brand-orange mb-1">1,015+</div>
+              <div className="text-gray-500 text-sm">Suits & Counting</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-brand-orange mb-1">4.9★</div>

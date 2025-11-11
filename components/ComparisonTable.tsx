@@ -112,8 +112,8 @@ export default function ComparisonTable() {
           <p className="text-lg mb-4">Don't just take our word for it...</p>
           <div className="flex items-center justify-center gap-8 flex-wrap">
             <div className="text-center">
-              <div className="text-4xl font-bold text-brand-orange">500+</div>
-              <div className="text-sm">Happy Customers</div>
+              <div className="text-4xl font-bold text-brand-orange">1,015+</div>
+              <div className="text-sm">Suits Delivered</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-brand-orange">4.9★</div>

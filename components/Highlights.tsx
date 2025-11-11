@@ -83,7 +83,7 @@ export default function Highlights() {
         {/* Additional trust indicators */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { value: '500+', label: 'Suits Delivered' },
+            { value: '1015+', label: 'Suits & Counting' },
             { value: '4.9★', label: 'Average Rating' },
             { value: '3.5wk', label: 'Fast Turnaround' },
             { value: '100%', label: 'Customizable' },
