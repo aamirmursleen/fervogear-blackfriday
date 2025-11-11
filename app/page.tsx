@@ -14,6 +14,7 @@ const ComparisonTable = dynamic(() => import('@/components/ComparisonTable'), { 
 const SFICertification = dynamic(() => import('@/components/SFICertification'), { ssr: true });
 const SFILifeSaving = dynamic(() => import('@/components/SFILifeSaving'), { ssr: true });
 const PDFDownloads = dynamic(() => import('@/components/PDFDownloads'), { ssr: true });
+const MeasurementGuide = dynamic(() => import('@/components/MeasurementGuide'), { ssr: true });
 const VideoTestimonials = dynamic(() => import('@/components/VideoTestimonials'), { ssr: true });
 const MassiveCustomerGallery = dynamic(() => import('@/components/MassiveCustomerGallery'), { ssr: true });
 const MockupsSlider = dynamic(() => import('@/components/MockupsSlider'), { ssr: true });
@@ -73,6 +74,11 @@ export default function Home() {
 
       {/* PDF Downloads - Resources */}
       <PDFDownloads />
+
+      {/* Measurement Guide - How to measure */}
+      <div id="measurement-guide">
+        <MeasurementGuide />
+      </div>
 
       {/* Video testimonials - Social proof */}
       <div id="video-reels">
