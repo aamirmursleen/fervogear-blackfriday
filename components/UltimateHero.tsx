@@ -216,10 +216,14 @@ export default function UltimateHero() {
                         Total Value: $1,725
                         <a
                           href="#pricing-section"
-                          className="text-brand-orange hover:text-orange-500 transition-colors"
+                          className="relative text-brand-orange hover:text-orange-500 transition-colors group"
                           aria-label="See pricing details"
                         >
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          {/* Pulsing ring around icon */}
+                          <span className="absolute inset-0 rounded-full bg-brand-orange/30 animate-ping"></span>
+
+                          {/* Icon with animations */}
+                          <svg className="w-4 h-4 relative z-10 animate-bounce-slow group-hover:scale-125 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                         </a>
