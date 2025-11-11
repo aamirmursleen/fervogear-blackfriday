@@ -21,6 +21,7 @@ const PremiumBenefits = dynamic(() => import('@/components/PremiumBenefits'), { 
 const Process = dynamic(() => import('@/components/Process'), { ssr: true });
 const PremiumSocialProof = dynamic(() => import('@/components/PremiumSocialProof'), { ssr: true });
 const InteractiveFAQ = dynamic(() => import('@/components/InteractiveFAQ'), { ssr: true });
+const AIChatbot = dynamic(() => import('@/components/AIChatbot'), { ssr: true });
 const PremiumFinalCTA = dynamic(() => import('@/components/PremiumFinalCTA'), { ssr: true });
 const PremiumFooter = dynamic(() => import('@/components/PremiumFooter'), { ssr: true });
 
@@ -94,10 +95,13 @@ export default function Home() {
       {/* Social proof gallery with testimonials */}
       <PremiumSocialProof />
 
-      {/* Interactive FAQ with AI Chatbot - Answer questions */}
+      {/* Interactive FAQ - Answer questions */}
       <div id="faq-section">
         <InteractiveFAQ />
       </div>
+
+      {/* AI Chatbot - Own section */}
+      <AIChatbot />
 
       {/* Final CTA - Last chance */}
       <PremiumFinalCTA />
