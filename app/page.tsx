@@ -96,7 +96,9 @@ export default function Home() {
       <PaymentCalculator />
 
       {/* Karting Suits - Alternative pricing */}
-      <KartingSuits />
+      <div id="karting-section">
+        <KartingSuits />
+      </div>
 
       {/* Benefits - Why FervoGear */}
       <PremiumBenefits />

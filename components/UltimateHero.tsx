@@ -163,13 +163,19 @@ export default function UltimateHero() {
               </div>
             </div>
 
-            {/* Karting Option Notice */}
+            {/* Karting Option Notice - Clickable */}
             <div className="mt-6 pt-6 border-t border-gray-800">
-              <div className="bg-blue-500/10 border border-blue-500/30 rounded-xl p-4 hover:border-blue-500 transition-all">
-                <p className="text-center text-gray-300">
+              <a
+                href="#karting-section"
+                className="block bg-blue-500/10 border border-blue-500/30 rounded-xl p-4 hover:border-blue-500 hover:bg-blue-500/20 transition-all cursor-pointer group"
+              >
+                <p className="text-center text-gray-300 group-hover:text-white transition-colors">
                   <span className="text-blue-400 font-semibold">💡 Budget-friendly option:</span> Custom Karting Suits starting at <span className="text-white font-bold">just $349</span>
+                  <svg className="inline-block w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
                 </p>
-              </div>
+              </a>
             </div>
           </div>
 
