@@ -212,12 +212,24 @@ export default function UltimateHero() {
                 <div className="bg-black/80 backdrop-blur-xl rounded-2xl p-6 border border-white/10">
                   <div className="flex items-center justify-between mb-3">
                     <div>
-                      <div className="text-gray-400 text-sm">Black Friday Price</div>
+                      <div className="text-gray-400 text-sm flex items-center gap-2">
+                        Total Value: $1,725
+                        <a
+                          href="#pricing-section"
+                          className="text-brand-orange hover:text-orange-500 transition-colors"
+                          aria-label="See pricing details"
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </a>
+                      </div>
                       <div className="text-4xl font-bold text-brand-orange">$799</div>
-                      <div className="text-gray-500 text-sm line-through">Regular $1,100</div>
+                      <div className="text-gray-500 text-sm">Black Friday Weekend Only</div>
                     </div>
-                    <div className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold">
-                      SAVE $301
+                    <div className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold text-center">
+                      <div className="text-xs">SAVE</div>
+                      <div className="text-xl">$926</div>
                     </div>
                   </div>
                   <div className="text-yellow-400 font-semibold text-sm">
