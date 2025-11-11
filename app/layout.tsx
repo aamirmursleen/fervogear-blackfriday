@@ -90,15 +90,6 @@ export default function RootLayout({
             }
           `}
         </Script>
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=921267035733504&ev=PageView&noscript=1"
-            alt=""
-          />
-        </noscript>
 
         {/* Plausible Analytics */}
         <Script
