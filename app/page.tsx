@@ -115,7 +115,9 @@ export default function Home() {
       </div>
 
       {/* AI Chatbot - Own section */}
-      <AIChatbot />
+      <div id="ai-chatbot">
+        <AIChatbot />
+      </div>
 
       {/* Final CTA - Last chance */}
       <PremiumFinalCTA />
