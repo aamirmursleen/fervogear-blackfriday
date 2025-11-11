@@ -64,11 +64,12 @@ export default function MeasurementGuide() {
               </h3>
               <div className="bg-white rounded-2xl p-6 inline-block mb-6">
                 <Image
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://fervo.me/video&color=FF6019"
-                  alt="Scan QR Code"
-                  width={200}
-                  height={200}
-                  className="w-full h-auto"
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://fervo.me/video&color=FF6019"
+                  alt="Scan QR Code for Measurement Video"
+                  width={300}
+                  height={300}
+                  className="w-48 h-48"
+                  unoptimized
                 />
               </div>
               <p className="text-gray-400">
