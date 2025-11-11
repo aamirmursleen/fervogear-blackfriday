@@ -2,6 +2,22 @@
 
 import { useState } from 'react';
 
+// Helper to make phone numbers and emails clickable
+const parseMessageContent = (text: string) => {
+  // Replace phone numbers with clickable links
+  let parsed = text.replace(/\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/g, (match) => {
+    const cleanNumber = match.replace(/\D/g, '');
+    return `<a href="tel:${cleanNumber}" class="text-green-400 hover:text-green-300 underline font-semibold">${match}</a>`;
+  });
+
+  // Replace emails with clickable links
+  parsed = parsed.replace(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/g, (match) => {
+    return `<a href="mailto:${match}" class="text-blue-400 hover:text-blue-300 underline font-semibold">${match}</a>`;
+  });
+
+  return parsed;
+};
+
 export default function AIChatbot() {
   const [chatMessages, setChatMessages] = useState<Array<{role: 'user' | 'assistant', content: string}>>([]);
   const [userInput, setUserInput] = useState('');
@@ -169,7 +185,10 @@ export default function AIChatbot() {
                               : 'bg-gray-800 text-gray-200'
                           }`}
                         >
-                          <p className="text-sm leading-relaxed whitespace-pre-wrap">{msg.content}</p>
+                          <div
+                            className="text-sm leading-relaxed whitespace-pre-wrap"
+                            dangerouslySetInnerHTML={{ __html: msg.role === 'assistant' ? parseMessageContent(msg.content) : msg.content }}
+                          />
                         </div>
                       </div>
 
