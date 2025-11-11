@@ -60,6 +60,11 @@ export default function Home() {
       {/* FREE Design CTA - Lead with low commitment */}
       <FreeDesignCTA />
 
+      {/* Video Reels - Built for Champions */}
+      <div id="video-reels">
+        <VideoTestimonials />
+      </div>
+
       {/* Pain/Solution - Address objections */}
       <PainSolution />
 
@@ -78,11 +83,6 @@ export default function Home() {
       {/* Measurement Guide - How to measure */}
       <div id="measurement-guide">
         <MeasurementGuide />
-      </div>
-
-      {/* Video testimonials - Social proof */}
-      <div id="video-reels">
-        <VideoTestimonials />
       </div>
 
       {/* Massive Customer Gallery */}

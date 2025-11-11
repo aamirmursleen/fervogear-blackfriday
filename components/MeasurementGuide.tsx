@@ -102,19 +102,6 @@ export default function MeasurementGuide() {
               </ul>
             </div>
 
-            {/* Important Notice */}
-            <div className="bg-red-500/10 border-2 border-red-500/30 rounded-2xl p-6">
-              <div className="flex items-start gap-3">
-                <span className="text-3xl">⚠️</span>
-                <div>
-                  <h4 className="text-white font-bold text-lg mb-2">Important</h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    Your suit will be tailored to the dimensions supplied. <strong className="text-white">FervoGear USA is not responsible for measurement errors.</strong>
-                  </p>
-                </div>
-              </div>
-            </div>
-
             {/* Download Buttons */}
             <div className="space-y-4">
               <a
