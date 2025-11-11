@@ -77,7 +77,28 @@ export default function UltimateHero() {
             {/* Power subheadline */}
             <p className="text-2xl md:text-3xl text-gray-300 font-light leading-relaxed">
               SFI-5 Certified • 100% Custom Design • 3.5 Week Delivery
-              <span className="block mt-3 text-brand-orange font-bold">Start with a FREE Design Mockup</span>
+            </p>
+
+            {/* FREE Bonus Callout - High Impact */}
+            <div className="bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-green-500/20 border-2 border-green-500/50 rounded-2xl p-6 animate-pulse-slow">
+              <div className="flex items-center justify-center gap-3 mb-2">
+                <span className="text-3xl">🎁</span>
+                <p className="text-2xl md:text-3xl font-black text-white">
+                  LIMITED TIME BONUS!
+                </p>
+                <span className="text-3xl">🎁</span>
+              </div>
+              <p className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent text-center">
+                Get FREE Matching Gloves ($150) + FREE Racing Shoes ($250)
+              </p>
+              <p className="text-gray-300 text-center mt-2 text-base md:text-lg">
+                That's <span className="text-white font-bold">$400 in FREE gear</span> when you order today! <span className="text-yellow-400">⚡</span>
+              </p>
+            </div>
+
+            {/* Additional incentive */}
+            <p className="text-lg text-gray-400 text-center lg:text-left">
+              <span className="text-brand-orange font-bold">Plus:</span> FREE Design Mockup • Unlimited Revisions • FREE USA Shipping
             </p>
 
             {/* Social proof pills */}
@@ -251,6 +272,16 @@ export default function UltimateHero() {
                       <div className="text-xl">$700.95</div>
                     </div>
                   </div>
+
+                  {/* FREE Items Badge */}
+                  <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl px-4 py-2 mb-2">
+                    <div className="flex items-center justify-center gap-2 text-sm font-bold">
+                      <span>🎁</span>
+                      <span>FREE Gloves + Shoes ($400 Value)</span>
+                      <span>🎁</span>
+                    </div>
+                  </div>
+
                   <div className="text-yellow-400 font-semibold text-sm">
                     ⚠️ Limited to 47 suits • 15 remaining
                   </div>
@@ -285,11 +316,18 @@ export default function UltimateHero() {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-10px); }
         }
+        @keyframes pulse-slow {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.95; transform: scale(1.02); }
+        }
         .animate-float {
           animation: float linear infinite;
         }
         .animate-bounce-slow {
           animation: bounce-slow 3s ease-in-out infinite;
+        }
+        .animate-pulse-slow {
+          animation: pulse-slow 3s ease-in-out infinite;
         }
       `}</style>
     </section>
