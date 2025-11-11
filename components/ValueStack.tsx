@@ -1,16 +1,16 @@
 export default function ValueStack() {
   const items = [
-    { name: 'Double Layer SFI-5 Nomex Race Suit', value: '$1,100', icon: '🏎️' },
-    { name: 'Premium Matching Racing Gloves', value: '$150', icon: '🧤' },
+    { name: 'Double Layer SFI-5 Nomex Race Suit', value: '$799', icon: '🏎️' },
+    { name: 'Matching Nomex Gloves', value: '$150', icon: '🧤' },
+    { name: 'Matching Shoes', value: '$250', icon: '👟' },
     { name: 'Custom Design Service (Unlimited Revisions)', value: '$200', icon: '🎨' },
-    { name: 'Professional Mockup Design', value: '$75', icon: '💎' },
-    { name: 'Custom Tailoring to Your Measurements', value: '$150', icon: '📏' },
-    { name: 'FREE USA Shipping', value: '$50', icon: '🚚' },
+    { name: 'Premium Nomex Inner Lining Upgrade', value: '$150', icon: '💎' },
+    { name: 'FREE USA Shipping', value: '$50.95', icon: '🚚' },
   ];
 
-  const totalValue = 1725;
-  const dealPrice = 799;
-  const savings = totalValue - dealPrice;
+  const totalValue = 1599.95;
+  const dealPrice = 899;
+  const savings = 700.95;
 
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
@@ -24,7 +24,7 @@ export default function ValueStack() {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-block bg-green-500/10 border border-green-500/30 rounded-full px-6 py-2 text-green-500 font-semibold text-sm mb-6 animate-pulse">
-            💰 BLACK FRIDAY EXCLUSIVE
+            💰 LIMITED TIME OFFER
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             <span className="text-white">Here's</span>{' '}
@@ -32,7 +32,7 @@ export default function ValueStack() {
             <span className="text-white">You Get</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400">
-            This Black Friday weekend only - complete race suit package
+            Complete race suit package - limited availability
           </p>
         </div>
 
@@ -66,9 +66,9 @@ export default function ValueStack() {
               </span>
             </div>
 
-            {/* Black Friday Price */}
+            {/* Deal Price */}
             <div className="flex justify-between items-center py-6 px-6 bg-gradient-to-r from-brand-orange/20 to-orange-600/20 border-2 border-brand-orange rounded-xl">
-              <span className="text-2xl md:text-3xl font-bold text-white">Black Friday Price:</span>
+              <span className="text-2xl md:text-3xl font-bold text-white">Deal Price:</span>
               <span className="text-5xl md:text-6xl font-black bg-gradient-to-r from-brand-orange to-orange-600 bg-clip-text text-transparent">
                 ${dealPrice}
               </span>

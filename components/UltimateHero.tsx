@@ -64,7 +64,7 @@ export default function UltimateHero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-brand-orange"></span>
               </span>
-              <span className="text-brand-orange font-bold text-sm tracking-wide">LIMITED BLACK FRIDAY OFFER</span>
+              <span className="text-brand-orange font-bold text-sm tracking-wide">LIMITED TIME OFFER</span>
             </div>
 
             {/* Massive headline with gradient */}
@@ -228,7 +228,7 @@ export default function UltimateHero() {
                   <div className="flex items-center justify-between mb-3">
                     <div>
                       <div className="text-gray-400 text-sm flex items-center gap-2">
-                        Total Value: $1,725
+                        Total Value: $1,599.95
                         <a
                           href="#pricing-section"
                           className="relative text-brand-orange hover:text-orange-500 transition-colors group"
@@ -243,12 +243,12 @@ export default function UltimateHero() {
                           </svg>
                         </a>
                       </div>
-                      <div className="text-4xl font-bold text-brand-orange">$799</div>
-                      <div className="text-gray-500 text-sm">Black Friday Weekend Only</div>
+                      <div className="text-4xl font-bold text-brand-orange">$899</div>
+                      <div className="text-gray-500 text-sm">Limited Time Offer</div>
                     </div>
                     <div className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold text-center">
                       <div className="text-xs">SAVE</div>
-                      <div className="text-xl">$926</div>
+                      <div className="text-xl">$700.95</div>
                     </div>
                   </div>
                   <div className="text-yellow-400 font-semibold text-sm">

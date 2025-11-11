@@ -44,6 +44,11 @@ export default function Home() {
       {/* ULTIMATE Hero section - Conversion focused */}
       <UltimateHero />
 
+      {/* Video Reels - Built for Champions */}
+      <div id="video-reels">
+        <VideoTestimonials />
+      </div>
+
       {/* Quick Navigation Links */}
       <QuickLinks />
 
@@ -59,11 +64,6 @@ export default function Home() {
 
       {/* FREE Design CTA - Lead with low commitment */}
       <FreeDesignCTA />
-
-      {/* Video Reels - Built for Champions */}
-      <div id="video-reels">
-        <VideoTestimonials />
-      </div>
 
       {/* Pain/Solution - Address objections */}
       <PainSolution />

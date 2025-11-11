@@ -84,7 +84,7 @@ export default function ExitIntentPopup() {
             </h2>
             <p className="text-2xl md:text-3xl font-bold mb-2">
               <span className="bg-gradient-to-r from-brand-orange to-red-500 bg-clip-text text-transparent">
-                Save $926
+                Save $700.95
               </span>
             </p>
             <p className="text-lg text-gray-300">
@@ -119,7 +119,7 @@ export default function ExitIntentPopup() {
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                CLAIM MY $926 SAVINGS
+                CLAIM MY $700.95 SAVINGS
               </span>
             </div>
           </a>
