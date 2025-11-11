@@ -162,6 +162,15 @@ export default function UltimateHero() {
                 FREE USA Shipping
               </div>
             </div>
+
+            {/* Karting Option Notice */}
+            <div className="mt-6 pt-6 border-t border-gray-800">
+              <div className="bg-blue-500/10 border border-blue-500/30 rounded-xl p-4 hover:border-blue-500 transition-all">
+                <p className="text-center text-gray-300">
+                  <span className="text-blue-400 font-semibold">💡 Budget-friendly option:</span> Custom Karting Suits starting at <span className="text-white font-bold">just $349</span>
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Right: Auto-Playing Image Slider */}
