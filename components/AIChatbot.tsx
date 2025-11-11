@@ -76,11 +76,23 @@ export default function AIChatbot() {
         const updated = [...prev];
         updated[assistantMessageIndex] = {
           role: 'assistant',
-          content: 'Sorry, I encountered an error. Please call us at (409) 404-0962 for immediate assistance!'
+          content: ''
         };
         return updated;
       });
       setIsLoading(false);
+
+      // Show error with clickable contact options
+      setTimeout(() => {
+        setChatMessages(prev => {
+          const updated = [...prev];
+          updated[assistantMessageIndex] = {
+            role: 'assistant',
+            content: 'I apologize, but I need help with this question. Our team would love to assist you!'
+          };
+          return updated;
+        });
+      }, 100);
     }
   };
 
@@ -146,19 +158,46 @@ export default function AIChatbot() {
               ) : (
                 <div className="space-y-4">
                   {chatMessages.map((msg, i) => (
-                    <div
-                      key={i}
-                      className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
-                    >
+                    <div key={i}>
                       <div
-                        className={`max-w-[85%] px-5 py-3 rounded-2xl ${
-                          msg.role === 'user'
-                            ? 'bg-gradient-to-r from-brand-orange to-orange-600 text-white'
-                            : 'bg-gray-800 text-gray-200'
-                        }`}
+                        className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                       >
-                        <p className="text-sm leading-relaxed">{msg.content}</p>
+                        <div
+                          className={`max-w-[85%] px-5 py-3 rounded-2xl ${
+                            msg.role === 'user'
+                              ? 'bg-gradient-to-r from-brand-orange to-orange-600 text-white'
+                              : 'bg-gray-800 text-gray-200'
+                          }`}
+                        >
+                          <p className="text-sm leading-relaxed whitespace-pre-wrap">{msg.content}</p>
+                        </div>
                       </div>
+
+                      {/* Show contact options if AI needs help */}
+                      {msg.role === 'assistant' && msg.content.includes('need help with this question') && (
+                        <div className="flex justify-start mt-3">
+                          <div className="max-w-[85%] space-y-2">
+                            <a
+                              href="tel:4094040962"
+                              className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-lg transition-all text-sm"
+                            >
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                              </svg>
+                              Call: (409) 404-0962
+                            </a>
+                            <a
+                              href="mailto:support@fervogear.com"
+                              className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg transition-all text-sm"
+                            >
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                              </svg>
+                              Email: support@fervogear.com
+                            </a>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   ))}
                   {isLoading && (
