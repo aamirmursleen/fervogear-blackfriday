@@ -50,8 +50,8 @@ export default function PremiumFinalCTA() {
 
             <div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-3">💰</div>
-              <div className="font-semibold text-lg text-white mb-2">Save $451</div>
-              <div className="text-white/80 text-sm">Black Friday exclusive pricing</div>
+              <div className="font-semibold text-lg text-white mb-2">Save $700.95</div>
+              <div className="text-white/80 text-sm">Limited time special pricing</div>
             </div>
           </div>
 
@@ -79,7 +79,7 @@ export default function PremiumFinalCTA() {
             <div className="bg-yellow-400/20 border border-yellow-400/40 rounded-xl p-4 inline-block">
               <p className="text-white font-semibold flex items-center gap-2">
                 <span className="text-yellow-400">⚠️</span>
-                Black Friday Deal Ends in 48 Hours
+                Limited Availability - Only 47 Suits
                 <span className="text-yellow-400">⚠️</span>
               </p>
             </div>
@@ -88,7 +88,7 @@ export default function PremiumFinalCTA() {
 
         {/* Bottom disclaimer */}
         <div className="mt-8 text-white/70 text-sm">
-          <p>This is a limited-time Black Friday offer. Once the weekend ends or we hit 47 orders, this deal is permanently gone.</p>
+          <p>This is a limited-time offer. Once we hit 47 orders, this special pricing is permanently gone.</p>
         </div>
       </div>
 

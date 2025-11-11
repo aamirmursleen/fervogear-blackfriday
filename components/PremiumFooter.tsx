@@ -198,11 +198,11 @@ export default function PremiumFooter() {
         </div>
       </div>
 
-      {/* Black Friday Bottom Banner */}
+      {/* Limited Time Offer Bottom Banner */}
       <div className="bg-gradient-to-r from-brand-orange via-orange-600 to-brand-orange py-4 animate-pulse">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="text-white font-bold text-lg">
-            🔥 BLACK FRIDAY: Save $451 + FREE Gloves • Limited to 47 Orders • Ends Sunday 11:59 PM PST 🔥
+            🔥 LIMITED OFFER: Save $700.95 + FREE Gloves & Shoes • Only 47 Suits Available 🔥
           </p>
         </div>
       </div>

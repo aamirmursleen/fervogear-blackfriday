@@ -184,8 +184,8 @@ export default function KartingSuits() {
             <div className="text-center mb-6">
               <div className="text-5xl mb-3">🔥</div>
               <h3 className="text-2xl font-bold text-red-400 mb-2">SFI-5 Suits</h3>
-              <div className="text-4xl font-black text-white mb-2">$799</div>
-              <div className="text-gray-400 text-sm">Black Friday Price (Save $926!)</div>
+              <div className="text-4xl font-black text-white mb-2">$899</div>
+              <div className="text-gray-400 text-sm">Special Price (Save $700.95!)</div>
             </div>
 
             <ul className="space-y-3 mb-6">

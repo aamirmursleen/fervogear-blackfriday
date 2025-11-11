@@ -1,7 +1,7 @@
 export default function ComparisonTable() {
   const features = [
     { name: 'Turnaround Time', fervogear: '3.5 weeks', competitors: '8-12 weeks' },
-    { name: 'Starting Price (SFI-5)', fervogear: '$799 (Black Friday)', competitors: '$1,200-$1,500' },
+    { name: 'Starting Price (SFI-5)', fervogear: '$899 (Special Offer)', competitors: '$1,200-$1,500' },
     { name: 'Unlimited Customization', fervogear: true, competitors: false },
     { name: 'FREE Design Mockup', fervogear: true, competitors: '($50-$100 fee)' },
     { name: 'Unlimited Revisions', fervogear: true, competitors: '(2-3 max)' },

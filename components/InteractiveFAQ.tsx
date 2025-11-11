@@ -35,8 +35,8 @@ export default function InteractiveFAQ() {
       answer: "Yes! We partner with Affirm for Buy Now, Pay Later. Split your purchase into 4 interest-free payments, or choose extended terms up to 36 months. No credit card required for the FREE mockup."
     },
     {
-      question: "What's included in the Black Friday deal?",
-      answer: "Double Layer SFI-5 rated Nomex suit ($1,100 value) + FREE matching racing gloves ($150 value) = Total $1,250 value for just $799. That's $451 in savings! Plus FREE USA shipping, FREE design mockup, and unlimited revisions. Limited to 47 suits."
+      question: "What's included in this special offer?",
+      answer: "Double Layer SFI-5 Nomex Race Suit ($799) + FREE Matching Gloves ($150) + FREE Racing Shoes ($250) + Custom Design Service ($200) + Premium Nomex Inner Lining ($150) + FREE USA Shipping ($50.95) = Total $1,599.95 value for just $899. That's $700.95 in savings! Plus FREE design mockup and unlimited revisions. Limited to 47 suits."
     },
     {
       question: "Can I see examples of custom designs?",
