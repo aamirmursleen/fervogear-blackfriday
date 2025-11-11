@@ -3,11 +3,11 @@
 export default function QuickLinks() {
   const sections = [
     { id: 'highlights', icon: '✨', label: 'Why Choose Us', color: 'from-blue-500 to-blue-600' },
-    { id: 'about', icon: '📖', label: 'About Us', color: 'from-purple-500 to-purple-600' },
-    { id: 'customer-gallery', icon: '👥', label: 'Customers', color: 'from-green-500 to-green-600' },
-    { id: 'pricing-section', icon: '💰', label: 'Pricing', color: 'from-yellow-500 to-yellow-600' },
-    { id: 'pdf-downloads', icon: '📄', label: 'Resources', color: 'from-red-500 to-red-600' },
-    { id: 'faq-section', icon: '❓', label: 'FAQs & AI Chat', color: 'from-pink-500 to-pink-600' },
+    { id: 'about', icon: '📖', label: 'Our Story', color: 'from-purple-500 to-purple-600' },
+    { id: 'video-reels', icon: '🎬', label: 'Video Reels', color: 'from-red-500 to-red-600' },
+    { id: 'customer-gallery', icon: '👥', label: 'Real Customers', color: 'from-green-500 to-green-600' },
+    { id: 'pricing-section', icon: '💰', label: 'Pricing & Deals', color: 'from-yellow-500 to-yellow-600' },
+    { id: 'faq-section', icon: '💬', label: 'FAQs & AI Help', color: 'from-pink-500 to-pink-600' },
   ];
 
   const handleClick = (sectionId: string) => {

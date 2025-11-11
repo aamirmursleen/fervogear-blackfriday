@@ -65,7 +65,9 @@ export default function Home() {
       <PDFDownloads />
 
       {/* Video testimonials - Social proof */}
-      <VideoTestimonials />
+      <div id="video-reels">
+        <VideoTestimonials />
+      </div>
 
       {/* Massive Customer Gallery */}
       <div id="customer-gallery">
