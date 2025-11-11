@@ -44,7 +44,7 @@ export default function PremiumCountdown() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
             </span>
             <span className="font-bold text-[11px] truncate">
-              BLACK FRIDAY: $451 OFF
+              BLACK FRIDAY: SAVE $926
             </span>
           </div>
 
@@ -82,7 +82,7 @@ export default function PremiumCountdown() {
               <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
             </span>
             <span className="font-bold text-base">
-              BLACK FRIDAY: Save $451 + FREE Gloves
+              BLACK FRIDAY: Save $926 + FREE Gloves
             </span>
           </div>
 
