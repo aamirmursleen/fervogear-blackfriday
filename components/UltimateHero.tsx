@@ -55,9 +55,33 @@ export default function UltimateHero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 w-full">
+        {/* Mobile Title Section - Shows First */}
+        <div className="lg:hidden space-y-8 text-center mb-8">
+          {/* Clean badge */}
+          <div className="inline-flex items-center gap-3 bg-brand-orange/10 border-2 border-brand-orange/30 rounded-full px-6 py-3 backdrop-blur-sm">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-brand-orange"></span>
+            </span>
+            <span className="text-brand-orange font-bold text-sm tracking-wide">LIMITED TIME OFFER</span>
+          </div>
+
+          {/* Massive headline with gradient */}
+          <h1 className="text-5xl md:text-6xl font-black leading-none">
+            <span className="block text-white mb-2">Your Dream</span>
+            <span className="block bg-gradient-to-r from-brand-orange via-orange-500 to-red-500 bg-clip-text text-transparent mb-2">Race Suit.</span>
+            <span className="block text-white text-4xl md:text-5xl">Exactly How You Want It.</span>
+          </h1>
+
+          {/* Power subheadline */}
+          <p className="text-2xl md:text-3xl text-gray-300 font-light leading-relaxed">
+            SFI-5 Certified • 100% Custom Design • 3.5 Week Delivery
+          </p>
+        </div>
+
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Ultimate Copy */}
-          <div className="space-y-8 text-center lg:text-left order-1 lg:order-none">
+          {/* Left: Ultimate Copy - Desktop Only for full section */}
+          <div className="hidden lg:block space-y-8 text-center lg:text-left">
             {/* Clean badge */}
             <div className="inline-flex items-center gap-3 bg-brand-orange/10 border-2 border-brand-orange/30 rounded-full px-6 py-3 backdrop-blur-sm">
               <span className="relative flex h-3 w-3">
@@ -345,6 +369,69 @@ export default function UltimateHero() {
             {/* Decorative glows */}
             <div className="absolute -z-10 top-1/4 -right-16 w-96 h-96 bg-brand-orange/30 rounded-full blur-3xl"></div>
             <div className="absolute -z-10 bottom-1/4 -left-16 w-96 h-96 bg-orange-600/20 rounded-full blur-3xl"></div>
+          </div>
+
+          {/* Mobile Content Section - Shows after images */}
+          <div className="lg:hidden space-y-8 text-center w-full px-4">
+            {/* FREE Bonus Callout - High Impact */}
+            <div className="bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-green-500/20 border-2 border-green-500/50 rounded-2xl p-6 animate-pulse-slow">
+              <div className="flex items-center justify-center gap-3 mb-2">
+                <span className="text-3xl">🎁</span>
+                <p className="text-2xl md:text-3xl font-black text-white">
+                  LIMITED TIME BONUS!
+                </p>
+                <span className="text-3xl">🎁</span>
+              </div>
+              <p className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent text-center">
+                Get FREE Matching Gloves ($150) + FREE Racing Shoes ($250)
+              </p>
+              <p className="text-gray-300 text-center mt-2 text-base md:text-lg">
+                That's <span className="text-white font-bold">$400 in FREE gear</span> when you order today! <span className="text-yellow-400">⚡</span>
+              </p>
+            </div>
+
+            {/* Mega CTA button */}
+            <div className="space-y-4 pt-4">
+              <a
+                href={CTA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center justify-center w-full"
+              >
+                <div className="absolute -inset-1 bg-gradient-to-r from-brand-orange via-orange-600 to-red-500 rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity"></div>
+                <div className="relative flex items-center justify-center gap-3 bg-gradient-to-r from-brand-orange to-orange-600 text-white font-bold text-xl px-12 py-6 rounded-xl transform group-hover:scale-105 transition-all duration-300 shadow-2xl w-full">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                  </svg>
+                  <span>GET FREE DESIGN MOCKUP</span>
+                  <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+
+            {/* Trust indicators */}
+            <div className="flex flex-wrap items-center gap-6 text-gray-400 text-sm justify-center pt-4">
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                </svg>
+                No Credit Card Required
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                </svg>
+                Unlimited Revisions
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                </svg>
+                FREE USA Shipping
+              </div>
+            </div>
           </div>
         </div>
       </div>
