@@ -65,29 +65,24 @@ export default function InteractiveFAQ() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      // Call our secure server-side API (protects API key!)
+      const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.NEXT_PUBLIC_OPENAI_API_KEY}`,
         },
         body: JSON.stringify({
-          model: 'gpt-4-turbo',
-          messages: [
-            {
-              role: 'system',
-              content: 'You are a helpful FervoGear customer service AI assistant. Answer questions about custom race suits, SFI certifications, ordering process, pricing ($799 Black Friday deal, regular $1,100), 3.5 week delivery, unlimited customization, Nomex fabric, and payment options (Affirm, Klarna). Be friendly, concise, and helpful. Always encourage them to get a FREE design mockup or call (409) 404-0962.'
-            },
-            ...chatMessages,
-            userMessage
-          ],
-          max_tokens: 500,
-          temperature: 0.7,
+          messages: [...chatMessages, userMessage]
         }),
       });
 
       const data = await response.json();
-      const aiMessage = { role: 'assistant' as const, content: data.choices[0].message.content };
+
+      if (data.error) {
+        throw new Error(data.error);
+      }
+
+      const aiMessage = { role: 'assistant' as const, content: data.message };
       setChatMessages(prev => [...prev, aiMessage]);
     } catch (error) {
       setChatMessages(prev => [...prev, { role: 'assistant', content: 'Sorry, I encountered an error. Please call us at (409) 404-0962 for immediate assistance!' }]);
