@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import PremiumCountdown from '@/components/PremiumCountdown';
 import StickyMobileNav from '@/components/StickyMobileNav';
 import UltimateHero from '@/components/UltimateHero';
+import QuickLinks from '@/components/QuickLinks';
 import Highlights from '@/components/Highlights';
 import FreeDesignCTA from '@/components/FreeDesignCTA';
 
@@ -35,11 +36,18 @@ export default function Home() {
       {/* ULTIMATE Hero section - Conversion focused */}
       <UltimateHero />
 
+      {/* Quick Navigation Links */}
+      <QuickLinks />
+
       {/* Highlights - Why Choose FervoGear */}
-      <Highlights />
+      <div id="highlights">
+        <Highlights />
+      </div>
 
       {/* About Us - Company story */}
-      <AboutUs />
+      <div id="about">
+        <AboutUs />
+      </div>
 
       {/* FREE Design CTA - Lead with low commitment */}
       <FreeDesignCTA />
