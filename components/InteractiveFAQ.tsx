@@ -11,7 +11,7 @@ export default function InteractiveFAQ() {
       answer: "Simply fill out our form with your preferences (colors, logos, sponsors). Within 24 hours, you'll receive a professional 3D mockup of your suit. No payment required. You can request unlimited revisions until it's perfect. Only when you love the design do you place your order."
     },
     {
-      question: "What makes FervoGear different from K1 or Simpson?",
+      question: "What makes FervoGear USA different from other brands?",
       answer: "We offer the FASTEST turnaround (3.5 weeks vs 8-12 weeks), 100% customization with FREE unlimited revisions, lower prices with our price match guarantee, and personal customer service. Every suit is custom-made to your measurements, not off-the-shelf."
     },
     {

@@ -9,8 +9,8 @@ export default function PainSolution() {
     {
       icon: '💸',
       title: 'Overpriced "Premium" Suits',
-      pain: 'Pay $1,500+ for basic customization with K1 or Simpson',
-      solution: 'Same quality, 40% less. Plus price match guarantee'
+      pain: 'Other brands charge $1,500+ for basic customization options',
+      solution: 'Premium quality, 40% less. Plus price match guarantee'
     },
     {
       icon: '🎨',
