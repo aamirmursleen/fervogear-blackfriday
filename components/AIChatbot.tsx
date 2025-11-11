@@ -15,6 +15,10 @@ export default function AIChatbot() {
     setUserInput('');
     setIsLoading(true);
 
+    // Add empty assistant message that will be filled by stream
+    const assistantMessageIndex = chatMessages.length + 1;
+    setChatMessages(prev => [...prev, { role: 'assistant', content: '' }]);
+
     try {
       const response = await fetch('/api/chat', {
         method: 'POST',
@@ -26,19 +30,58 @@ export default function AIChatbot() {
         }),
       });
 
-      const data = await response.json();
-
-      if (data.error) {
-        throw new Error(data.error);
+      if (!response.ok || !response.body) {
+        throw new Error('Failed to get response');
       }
 
-      const aiMessage = { role: 'assistant' as const, content: data.message };
-      setChatMessages(prev => [...prev, aiMessage]);
-    } catch (error) {
-      setChatMessages(prev => [...prev, { role: 'assistant', content: 'Sorry, I encountered an error. Please call us at (409) 404-0962 for immediate assistance!' }]);
-    }
+      // Handle streaming response
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let accumulatedContent = '';
 
-    setIsLoading(false);
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        const chunk = decoder.decode(value);
+        const lines = chunk.split('\n');
+
+        for (const line of lines) {
+          if (line.startsWith('data: ') && line !== 'data: [DONE]') {
+            try {
+              const json = JSON.parse(line.slice(6));
+              const content = json.choices[0]?.delta?.content || '';
+              if (content) {
+                accumulatedContent += content;
+                // Update message in real-time!
+                setChatMessages(prev => {
+                  const updated = [...prev];
+                  updated[assistantMessageIndex] = {
+                    role: 'assistant',
+                    content: accumulatedContent
+                  };
+                  return updated;
+                });
+              }
+            } catch (e) {
+              // Skip invalid JSON
+            }
+          }
+        }
+      }
+
+      setIsLoading(false);
+    } catch (error) {
+      setChatMessages(prev => {
+        const updated = [...prev];
+        updated[assistantMessageIndex] = {
+          role: 'assistant',
+          content: 'Sorry, I encountered an error. Please call us at (409) 404-0962 for immediate assistance!'
+        };
+        return updated;
+      });
+      setIsLoading(false);
+    }
   };
 
   return (
