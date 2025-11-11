@@ -55,31 +55,30 @@ export default function UltimateHero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 w-full">
-        {/* Mobile Title Section - Shows First */}
-        <div className="lg:hidden space-y-8 text-center mb-8">
-          {/* Clean badge */}
-          <div className="inline-flex items-center gap-3 bg-brand-orange/10 border-2 border-brand-orange/30 rounded-full px-6 py-3 backdrop-blur-sm">
-            <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-brand-orange"></span>
-            </span>
-            <span className="text-brand-orange font-bold text-sm tracking-wide">LIMITED TIME OFFER</span>
-          </div>
-
-          {/* Massive headline with gradient */}
-          <h1 className="text-5xl md:text-6xl font-black leading-none">
-            <span className="block text-white mb-2">Your Dream</span>
-            <span className="block bg-gradient-to-r from-brand-orange via-orange-500 to-red-500 bg-clip-text text-transparent mb-2">Race Suit.</span>
-            <span className="block text-white text-4xl md:text-5xl">Exactly How You Want It.</span>
-          </h1>
-
-          {/* Power subheadline */}
-          <p className="text-2xl md:text-3xl text-gray-300 font-light leading-relaxed">
-            SFI-5 Certified • 100% Custom Design • 3.5 Week Delivery
-          </p>
-        </div>
-
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-16 items-center">
+          {/* Mobile Title Section - Shows First (order-0) */}
+          <div className="lg:hidden space-y-8 text-center w-full order-0">
+            {/* Clean badge */}
+            <div className="inline-flex items-center gap-3 bg-brand-orange/10 border-2 border-brand-orange/30 rounded-full px-6 py-3 backdrop-blur-sm">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-brand-orange"></span>
+              </span>
+              <span className="text-brand-orange font-bold text-sm tracking-wide">LIMITED TIME OFFER</span>
+            </div>
+
+            {/* Massive headline with gradient */}
+            <h1 className="text-5xl md:text-6xl font-black leading-none">
+              <span className="block text-white mb-2">Your Dream</span>
+              <span className="block bg-gradient-to-r from-brand-orange via-orange-500 to-red-500 bg-clip-text text-transparent mb-2">Race Suit.</span>
+              <span className="block text-white text-4xl md:text-5xl">Exactly How You Want It.</span>
+            </h1>
+
+            {/* Power subheadline */}
+            <p className="text-2xl md:text-3xl text-gray-300 font-light leading-relaxed">
+              SFI-5 Certified • 100% Custom Design • 3.5 Week Delivery
+            </p>
+          </div>
           {/* Left: Ultimate Copy - Desktop Only for full section */}
           <div className="hidden lg:block space-y-8 text-center lg:text-left">
             {/* Clean badge */}
@@ -225,7 +224,7 @@ export default function UltimateHero() {
           </div>
 
           {/* Right: Auto-Playing Image Slider */}
-          <div className="relative order-2 lg:order-none w-full">
+          <div className="relative order-1 lg:order-none w-full">
             {/* Main slider container */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
               <div className="relative aspect-[3/4]">
@@ -372,7 +371,7 @@ export default function UltimateHero() {
           </div>
 
           {/* Mobile Content Section - Shows after images */}
-          <div className="lg:hidden space-y-8 text-center w-full px-4">
+          <div className="lg:hidden space-y-8 text-center w-full px-4 order-2">
             {/* FREE Bonus Callout - High Impact */}
             <div className="bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-green-500/20 border-2 border-green-500/50 rounded-2xl p-6 animate-pulse-slow">
               <div className="flex items-center justify-center gap-3 mb-2">
