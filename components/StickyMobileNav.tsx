@@ -90,10 +90,10 @@ export default function StickyMobileNav() {
                 onClick={() => handleClick(item)}
                 className={`group relative flex flex-col items-center justify-center gap-0.5 min-w-[60px] md:min-w-[60px] py-1.5 rounded-lg transition-all duration-300 ${
                   item.isMainCTA
-                    ? 'bg-gradient-to-r from-brand-orange to-orange-600 text-white scale-105 -mt-6 md:-mt-5 px-4 md:px-4 py-2 shadow-lg shadow-brand-orange/50 hover:scale-110'
+                    ? 'bg-gradient-to-r from-brand-orange to-orange-600 text-white scale-105 -mt-6 md:-mt-5 px-4 md:px-4 py-2 shadow-lg shadow-brand-orange/50 hover:scale-110 z-30'
                     : activeSection === item.id
-                    ? 'text-brand-orange'
-                    : 'text-gray-400 hover:text-white active:text-white'
+                    ? 'text-brand-orange z-20'
+                    : 'text-gray-400 hover:text-white active:text-white z-20'
                 }`}
               >
                 {/* Pulse effect for main CTA */}
