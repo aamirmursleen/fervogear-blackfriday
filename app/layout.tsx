@@ -71,7 +71,7 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Facebook Pixel */}
+        {/* Facebook Pixel with Conversion API (Dual Tracking) */}
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
             // Prevent double initialization
@@ -84,8 +84,28 @@ export default function RootLayout({
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '921267035733504');
+
+              // Initialize with Advanced Matching
+              fbq('init', '921267035733504', {
+                em: '', // Will be populated if user provides email
+              });
+
               fbq('track', 'PageView');
+
+              // Also send to server (Conversion API)
+              fetch('/api/facebook', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  eventName: 'PageView',
+                  eventData: {
+                    eventSourceUrl: window.location.href,
+                    fbp: document.cookie.match(/(_fbp=)([^;]*)/)?.[2] || '',
+                    fbc: document.cookie.match(/(_fbc=)([^;]*)/)?.[2] || '',
+                  }
+                })
+              }).catch(err => console.log('CAPI Error:', err));
+
               window._fbPixelInitialized = true;
             }
           `}
