@@ -11,12 +11,14 @@ const AboutUs = dynamic(() => import('@/components/AboutUs'), { ssr: true });
 const PainSolution = dynamic(() => import('@/components/PainSolution'), { ssr: true });
 const ComparisonTable = dynamic(() => import('@/components/ComparisonTable'), { ssr: true });
 const SFICertification = dynamic(() => import('@/components/SFICertification'), { ssr: true });
+const SFILifeSaving = dynamic(() => import('@/components/SFILifeSaving'), { ssr: true });
 const PDFDownloads = dynamic(() => import('@/components/PDFDownloads'), { ssr: true });
 const VideoTestimonials = dynamic(() => import('@/components/VideoTestimonials'), { ssr: true });
 const MassiveCustomerGallery = dynamic(() => import('@/components/MassiveCustomerGallery'), { ssr: true });
 const MockupsSlider = dynamic(() => import('@/components/MockupsSlider'), { ssr: true });
 const ValueStack = dynamic(() => import('@/components/ValueStack'), { ssr: true });
 const PaymentCalculator = dynamic(() => import('@/components/PaymentCalculator'), { ssr: true });
+const KartingSuits = dynamic(() => import('@/components/KartingSuits'), { ssr: true });
 const PremiumBenefits = dynamic(() => import('@/components/PremiumBenefits'), { ssr: true });
 const Process = dynamic(() => import('@/components/Process'), { ssr: true });
 const PremiumSocialProof = dynamic(() => import('@/components/PremiumSocialProof'), { ssr: true });
@@ -62,6 +64,9 @@ export default function Home() {
       {/* SFI Certification - Trust & Safety */}
       <SFICertification />
 
+      {/* SFI Life-Saving - Emotional direct response */}
+      <SFILifeSaving />
+
       {/* PDF Downloads - Resources */}
       <PDFDownloads />
 
@@ -85,6 +90,9 @@ export default function Home() {
 
       {/* Payment Calculator - Affirm & Klarna */}
       <PaymentCalculator />
+
+      {/* Karting Suits - Alternative pricing */}
+      <KartingSuits />
 
       {/* Benefits - Why FervoGear */}
       <PremiumBenefits />
