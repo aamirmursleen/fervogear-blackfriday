@@ -1,5 +1,4 @@
 import dynamic from 'next/dynamic';
-import PremiumCountdown from '@/components/PremiumCountdown';
 import StickyMobileNav from '@/components/StickyMobileNav';
 import ExitIntentPopup from '@/components/ExitIntentPopup';
 import UltimateHero from '@/components/UltimateHero';
@@ -34,9 +33,6 @@ export default function Home() {
     <main className="min-h-screen relative pb-20 md:pb-24">
       {/* Exit Intent Popup - Capture abandoning visitors */}
       <ExitIntentPopup />
-
-      {/* Sticky countdown timer */}
-      <PremiumCountdown />
 
       {/* Sticky Mobile Navigation */}
       <StickyMobileNav />
