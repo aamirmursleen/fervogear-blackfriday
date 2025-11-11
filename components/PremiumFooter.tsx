@@ -23,7 +23,7 @@ export default function PremiumFooter() {
                 />
               </div>
               <p className="text-gray-400 mb-6 leading-relaxed text-lg">
-                Premium custom racing suits designed by racers, for racers. SFI-certified protection with unmatched style and industry-leading turnaround.
+                Premium custom racing suits designed by racers, for racers. FervoGear USA delivers SFI-certified protection with unmatched style and industry-leading turnaround.
               </p>
 
               {/* Social Media - REAL LINKS */}

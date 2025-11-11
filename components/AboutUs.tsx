@@ -45,10 +45,10 @@ export default function AboutUs() {
             <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-8">
               <h3 className="text-3xl font-bold mb-6 text-brand-orange">Our Mission</h3>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                At FervoGear, we're dedicated to constant research to bring you the best in racing gear innovation. With over <strong className="text-white">45 years of combined team experience</strong> and close collaboration with professional drivers, we make custom fire suits that meet the demanding standards of the racing industry.
+                At FervoGear USA, we're dedicated to constant research to bring you the best in racing gear innovation. With over <strong className="text-white">45 years of combined team experience</strong> and close collaboration with professional drivers, we make custom fire suits that meet the demanding standards of the racing industry.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Founded by a group of passionate racing fans, FervoGear has become a <strong className="text-brand-orange">leading racing suit manufacturer</strong> in motorsports by recognizing and solving drivers' specific needs and problems.
+                Founded by a group of passionate racing fans, FervoGear USA has become a <strong className="text-brand-orange">leading racing suit manufacturer</strong> in motorsports by recognizing and solving drivers' specific needs and problems.
               </p>
             </div>
 
