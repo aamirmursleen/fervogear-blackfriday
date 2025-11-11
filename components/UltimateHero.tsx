@@ -55,9 +55,9 @@ export default function UltimateHero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Ultimate Copy */}
-          <div className="space-y-8 text-center lg:text-left">
+          <div className="space-y-8 text-center lg:text-left order-1 lg:order-none">
             {/* Clean badge */}
             <div className="inline-flex items-center gap-3 bg-brand-orange/10 border-2 border-brand-orange/30 rounded-full px-6 py-3 backdrop-blur-sm">
               <span className="relative flex h-3 w-3">
@@ -201,7 +201,7 @@ export default function UltimateHero() {
           </div>
 
           {/* Right: Auto-Playing Image Slider */}
-          <div className="relative">
+          <div className="relative order-2 lg:order-none w-full">
             {/* Main slider container */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
               <div className="relative aspect-[3/4]">
@@ -243,8 +243,8 @@ export default function UltimateHero() {
                 </div>
               </div>
 
-              {/* Floating price badge on image - Clickable */}
-              <div className="absolute bottom-6 left-6 right-6 space-y-3 z-20">
+              {/* Floating price badge on image - Desktop only */}
+              <div className="hidden lg:block absolute bottom-6 left-6 right-6 space-y-3 z-20">
                 <a
                   href={CTA_LINK}
                   target="_blank"
@@ -291,6 +291,55 @@ export default function UltimateHero() {
                   </div>
                 </a>
               </div>
+            </div>
+
+            {/* Mobile price badge - Below image */}
+            <div className="lg:hidden mt-6">
+              <a
+                href={CTA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-black/80 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-brand-orange/50 transition-all duration-300 hover:scale-105 cursor-pointer group"
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <div>
+                    <div className="text-gray-400 text-sm flex items-center gap-2">
+                      Total Value: $1,599.95
+                      <span className="relative text-brand-orange group-hover:text-orange-500 transition-colors">
+                        {/* Pulsing ring around icon */}
+                        <span className="absolute inset-0 rounded-full bg-brand-orange/30 animate-ping"></span>
+
+                        {/* Icon with animations */}
+                        <svg className="w-4 h-4 relative z-10 animate-bounce-slow group-hover:scale-125 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </span>
+                    </div>
+                    <div className="text-4xl font-bold text-brand-orange group-hover:text-orange-500 transition-colors">$899</div>
+                    <div className="text-gray-500 text-sm">Limited Time Offer</div>
+                  </div>
+                  <div className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold text-center group-hover:bg-green-600 transition-colors">
+                    <div className="text-xs">SAVE</div>
+                    <div className="text-xl">$700.95</div>
+                  </div>
+                </div>
+
+                {/* FREE Items Badge */}
+                <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl px-4 py-2 mb-2 group-hover:from-green-600 group-hover:to-emerald-600 transition-all">
+                  <div className="flex items-center justify-center gap-2 text-sm font-bold">
+                    <span>🎁</span>
+                    <span>FREE Gloves + Shoes ($400 Value)</span>
+                    <span>🎁</span>
+                  </div>
+                </div>
+
+                <div className="text-yellow-400 font-semibold text-sm flex items-center justify-center gap-2">
+                  <span>⚠️ Limited to 47 suits • 15 remaining</span>
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </div>
+              </a>
             </div>
 
             {/* Decorative glows */}
