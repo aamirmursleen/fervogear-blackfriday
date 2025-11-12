@@ -9,6 +9,7 @@ export default function QuickLinks() {
     { id: 'customer-gallery', icon: '👥', label: 'Real Customers', color: 'from-green-500 to-green-600' },
     { id: 'sfi-certification', icon: '🛡️', label: 'SFI Certification', color: 'from-red-600 to-orange-600' },
     { id: 'pricing-section', icon: '💰', label: 'Pricing & Deals', color: 'from-yellow-500 to-yellow-600' },
+    { id: 'karting-section', icon: '🏁', label: 'Budget Karting', color: 'from-cyan-500 to-blue-600' },
     { id: 'faq-section', icon: '💬', label: 'FAQs & AI Help', color: 'from-pink-500 to-pink-600' },
   ];
 
