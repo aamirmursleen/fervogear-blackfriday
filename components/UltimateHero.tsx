@@ -50,9 +50,9 @@ export default function UltimateHero() {
         {/* Animated grid */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,107,0,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,107,0,0.1)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_70%)] animate-pulse"></div>
 
-        {/* Floating particles */}
+        {/* Floating particles - Optimized */}
         <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(8)].map((_, i) => (
             <div
               key={i}
               className="absolute w-2 h-2 bg-brand-orange/30 rounded-full animate-float"
@@ -256,8 +256,8 @@ export default function UltimateHero() {
                       alt={`FervoGear Customer ${index + 1}`}
                       fill
                       className="object-cover object-top"
-                      priority
-                      loading="eager"
+                      priority={index === 0}
+                      loading={index === 0 ? "eager" : "lazy"}
                     />
                   </div>
                 ))}
