@@ -37,7 +37,7 @@ export default function QuickLinks() {
           <p className="text-gray-400">Click to explore specific areas</p>
         </div>
 
-        {/* Quick Links Grid - 4 top, 3 bottom */}
+        {/* Quick Links Grid - 4 top, 3 middle, 2 bottom */}
         <div className="space-y-4">
           {/* Top Row - 4 cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -66,9 +66,36 @@ export default function QuickLinks() {
             ))}
           </div>
 
-          {/* Bottom Row - 3 cards (centered) */}
+          {/* Middle Row - 3 cards (centered) */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
             {sections.slice(4, 7).map((section) => (
+              <button
+                key={section.id}
+                onClick={() => handleClick(section.id)}
+                className="group relative bg-gradient-to-br from-gray-900 to-black border-2 border-gray-800 hover:border-brand-orange rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-orange/20"
+              >
+                {/* Icon */}
+                <div className="text-5xl mb-3 transform group-hover:scale-110 transition-transform">
+                  {section.icon}
+                </div>
+
+                {/* Label */}
+                <div className="text-white font-semibold text-sm text-center leading-tight">
+                  {section.label}
+                </div>
+
+                {/* Hover indicator */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-orange to-orange-600 rounded-b-xl scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+
+                {/* Glow effect */}
+                <div className={`absolute -inset-1 bg-gradient-to-r ${section.color} rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity -z-10`}></div>
+              </button>
+            ))}
+          </div>
+
+          {/* Bottom Row - 2 cards (centered) */}
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            {sections.slice(7, 9).map((section) => (
               <button
                 key={section.id}
                 onClick={() => handleClick(section.id)}
