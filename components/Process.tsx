@@ -9,7 +9,7 @@ export default function Process() {
     {
       number: '2',
       title: 'Get FREE Mockup',
-      description: 'Receive a professional 3D mockup of your custom suit within 24-48 hours. No payment required yet.',
+      description: 'Receive a professional mockup of your custom suit within 3 hours during business hours (max 24 hours). No payment required yet.',
       icon: '🎨'
     },
     {

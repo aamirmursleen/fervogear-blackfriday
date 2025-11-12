@@ -8,7 +8,7 @@ export default function FAQAccordion() {
   const faqs = [
     {
       question: "How does the FREE design mockup work?",
-      answer: "Simply fill out our form with your preferences (colors, logos, sponsors). Within 24 hours, you'll receive a professional 3D mockup of your suit. No payment required. You can request unlimited revisions until it's perfect. Only when you love the design do you place your order."
+      answer: "Simply fill out our form with your preferences (colors, logos, sponsors). Within 3 hours during business hours (max 24 hours), you'll receive a professional mockup of your suit. No payment required. You can request unlimited revisions until it's perfect. Only when you love the design do you place your order."
     },
     {
       question: "What makes FervoGear different from K1 or Simpson?",

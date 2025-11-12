@@ -51,7 +51,7 @@ export default function MockupGallery() {
                 See Your Exact Suit Before You Buy
               </h3>
               <p className="text-xl text-gray-300 mb-6">
-                Get a FREE professional 3D mockup of your custom design. Make unlimited changes until it's perfect.
+                Get a FREE professional mockup of your custom design. Make unlimited changes until it's perfect.
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center gap-3">

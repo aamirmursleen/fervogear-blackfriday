@@ -58,7 +58,7 @@ export default function FreeDesignCTA() {
           <div className="grid md:grid-cols-2 gap-6 mb-12 text-left max-w-2xl mx-auto">
             {[
               { icon: '✓', text: 'No credit card required', color: 'text-green-500' },
-              { icon: '✓', text: 'Professional 3D mockup in 24-48hrs', color: 'text-green-500' },
+              { icon: '✓', text: 'Professional mockup in 3hrs (max 24hrs)', color: 'text-green-500' },
               { icon: '✓', text: 'Unlimited design revisions', color: 'text-green-500' },
               { icon: '✓', text: 'Expert design consultation included', color: 'text-green-500' },
             ].map((item, index) => (
