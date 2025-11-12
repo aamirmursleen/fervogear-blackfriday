@@ -1,0 +1,65 @@
+name: Daily Suit Countdown
+
+on:
+  schedule:
+    # Runs every day at 00:00 UTC (adjust timezone as needed)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allows manual trigger for testing
+
+jobs:
+  update-suits-count:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Update suits count
+        run: |
+          # Read current count
+          CURRENT_COUNT=$(jq -r '.availableSuits' config/suits-count.json)
+          echo "Current suit count: $CURRENT_COUNT"
+
+          # Decrease by 1 (don't go below 0)
+          if [ "$CURRENT_COUNT" -gt 0 ]; then
+            NEW_COUNT=$((CURRENT_COUNT - 1))
+          else
+            NEW_COUNT=0
+          fi
+
+          echo "New suit count: $NEW_COUNT"
+
+          # Get current date
+          CURRENT_DATE=$(date +%Y-%m-%d)
+
+          # Update JSON file
+          jq --arg count "$NEW_COUNT" --arg date "$CURRENT_DATE" \
+            '.availableSuits = ($count | tonumber) | .lastUpdated = $date' \
+            config/suits-count.json > config/suits-count.json.tmp
+
+          mv config/suits-count.json.tmp config/suits-count.json
+
+          echo "Updated suits-count.json"
+          cat config/suits-count.json
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add config/suits-count.json
+
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🔥 Daily suit countdown: Update available suits count"
+            git push
+            echo "Changes pushed successfully"
+          fi

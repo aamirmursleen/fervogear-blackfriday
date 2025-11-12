@@ -1,6 +1,25 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 export default function PremiumCountdown() {
+  const [suitsCount, setSuitsCount] = useState(47);
+
+  useEffect(() => {
+    // Fetch the suits count from the config file
+    fetch('/api/suits-count')
+      .then(res => res.json())
+      .then(data => {
+        if (data.availableSuits !== undefined) {
+          setSuitsCount(data.availableSuits);
+        }
+      })
+      .catch(err => {
+        console.error('Failed to fetch suits count:', err);
+        // Keep default value of 47 on error
+      });
+  }, []);
+
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-brand-orange via-orange-600 to-brand-orange backdrop-blur-md border-b border-orange-400/20">
       <div className="max-w-7xl mx-auto px-3 md:px-4 py-2.5 md:py-3">
@@ -18,7 +37,7 @@ export default function PremiumCountdown() {
 
           {/* Scarcity indicator */}
           <div className="flex items-center gap-1 flex-shrink-0">
-            <span className="text-yellow-300 text-xs font-semibold">Only 47 Left</span>
+            <span className="text-yellow-300 text-xs font-semibold">Only {suitsCount} Left</span>
           </div>
 
           {/* Small CTA */}
@@ -41,7 +60,7 @@ export default function PremiumCountdown() {
               <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
             </span>
             <span className="font-bold text-base">
-              🔥 LIMITED OFFER: Save $700.95 + FREE Gloves & Shoes • Only 47 Suits Available 🔥
+              🔥 LIMITED OFFER: Save $700.95 + FREE Gloves & Shoes • Only {suitsCount} Suits Available 🔥
             </span>
           </div>
 
