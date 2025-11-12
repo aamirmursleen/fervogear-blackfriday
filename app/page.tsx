@@ -72,7 +72,9 @@ export default function Home() {
       <ComparisonTable />
 
       {/* SFI Certification - Trust & Safety */}
-      <SFICertification />
+      <div id="sfi-certification">
+        <SFICertification />
+      </div>
 
       {/* SFI Life-Saving - Emotional direct response */}
       <SFILifeSaving />

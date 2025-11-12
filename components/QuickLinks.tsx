@@ -7,6 +7,7 @@ export default function QuickLinks() {
     { id: 'measurement-guide', icon: '📏', label: 'How to Measure', color: 'from-orange-500 to-orange-600' },
     { id: 'video-reels', icon: '🎬', label: 'Video Reels', color: 'from-red-500 to-red-600' },
     { id: 'customer-gallery', icon: '👥', label: 'Real Customers', color: 'from-green-500 to-green-600' },
+    { id: 'sfi-certification', icon: '🛡️', label: 'SFI Certification', color: 'from-red-600 to-orange-600' },
     { id: 'pricing-section', icon: '💰', label: 'Pricing & Deals', color: 'from-yellow-500 to-yellow-600' },
     { id: 'faq-section', icon: '💬', label: 'FAQs & AI Help', color: 'from-pink-500 to-pink-600' },
   ];
