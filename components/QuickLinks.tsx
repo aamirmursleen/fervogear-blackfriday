@@ -19,7 +19,7 @@ export default function QuickLinks() {
   };
 
   return (
-    <section className="py-12 px-4 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+    <section id="quick-links-section" className="py-12 px-4 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
       {/* Background effect */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-orange/5 via-transparent to-transparent"></div>
 
