@@ -256,7 +256,8 @@ export default function UltimateHero() {
                       alt={`FervoGear Customer ${index + 1}`}
                       fill
                       className="object-cover object-top"
-                      priority={index === 0}
+                      priority
+                      loading="eager"
                     />
                   </div>
                 ))}

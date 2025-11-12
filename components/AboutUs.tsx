@@ -35,6 +35,7 @@ export default function AboutUs() {
                 alt="FervoGear Team"
                 fill
                 className="object-cover transform group-hover:scale-110 transition-transform duration-700"
+                loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
             </div>
