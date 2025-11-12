@@ -31,13 +31,8 @@ export default function PremiumCountdown() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
             </span>
             <span className="font-bold text-xs text-white leading-tight">
-              🔥 Save $700.95 + FREE Gear
+              Only 47 Custom Suit Orders This Month • {suitsCount} Left
             </span>
-          </div>
-
-          {/* Scarcity indicator */}
-          <div className="flex items-center gap-1 flex-shrink-0">
-            <span className="text-yellow-300 text-xs font-semibold">47 Orders • {suitsCount} Left</span>
           </div>
 
           {/* Small CTA */}
@@ -60,7 +55,7 @@ export default function PremiumCountdown() {
               <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
             </span>
             <span className="font-bold text-base">
-              🔥 Save $700.95 + FREE Gloves & Shoes • Only 47 Custom Suit Orders This Month • {suitsCount} Left 🔥
+              Only 47 Custom Suit Orders This Month • {suitsCount} Left
             </span>
           </div>
 
