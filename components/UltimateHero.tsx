@@ -7,6 +7,7 @@ const CTA_LINK = 'https://fervogear.typeform.com/custom?utm_source=website&utm_m
 
 export default function UltimateHero() {
   const [currentImage, setCurrentImage] = useState(0);
+  const [suitsCount, setSuitsCount] = useState(47);
 
   const heroImages = [
     'https://fervogear.com/wp-content/uploads/2024/04/Jacob-Julson-Worn-FervoGear-Race-Suit.jpg',
@@ -17,6 +18,18 @@ export default function UltimateHero() {
     'https://fervogear.com/wp-content/uploads/2024/05/Jernigan-Team-Worn-FervoGear-Suit.webp',
     'https://fervogear.com/wp-content/uploads/2024/08/Driver-Wearing-FervoGear-Suit-13.jpg',
   ];
+
+  // Fetch suits count
+  useEffect(() => {
+    fetch('/api/suits-count')
+      .then(res => res.json())
+      .then(data => {
+        if (data.availableSuits !== undefined) {
+          setSuitsCount(data.availableSuits);
+        }
+      })
+      .catch(err => console.error('Failed to fetch suits count:', err));
+  }, []);
 
   // Auto-slide every 2 seconds - faster, more engaging!
   useEffect(() => {
@@ -307,7 +320,7 @@ export default function UltimateHero() {
                   </div>
 
                   <div className="text-yellow-400 font-semibold text-sm flex items-center justify-center gap-2">
-                    <span>⚠️ Limited to 47 suits • 15 remaining</span>
+                    <span>⚠️ Limited to 47 suits • {suitsCount} remaining</span>
                     <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
@@ -357,7 +370,7 @@ export default function UltimateHero() {
                 </div>
 
                 <div className="text-yellow-400 font-semibold text-sm flex items-center justify-center gap-2">
-                  <span>⚠️ Limited to 47 suits • 15 remaining</span>
+                  <span>⚠️ Limited to 47 suits • {suitsCount} remaining</span>
                   <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>

@@ -1,8 +1,23 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 const CTA_LINK = 'https://fervogear.typeform.com/custom?utm_source=website&utm_medium=custom-race-suit-landing&utm_campaign=trusted-racers';
 
 export default function PremiumFinalCTA() {
+  const [suitsCount, setSuitsCount] = useState(47);
+
+  useEffect(() => {
+    fetch('/api/suits-count')
+      .then(res => res.json())
+      .then(data => {
+        if (data.availableSuits !== undefined) {
+          setSuitsCount(data.availableSuits);
+        }
+      })
+      .catch(err => console.error('Failed to fetch suits count:', err));
+  }, []);
+
   return (
     <section className="py-24 px-4 relative overflow-hidden">
       {/* Animated gradient background */}
@@ -79,7 +94,7 @@ export default function PremiumFinalCTA() {
             <div className="bg-yellow-400/20 border border-yellow-400/40 rounded-xl p-4 inline-block">
               <p className="text-white font-semibold flex items-center gap-2">
                 <span className="text-yellow-400">⚠️</span>
-                Limited Availability - Only 47 Suits
+                Limited Availability - Only {suitsCount} Suits
                 <span className="text-yellow-400">⚠️</span>
               </p>
             </div>

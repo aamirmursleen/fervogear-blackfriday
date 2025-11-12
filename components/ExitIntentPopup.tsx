@@ -6,6 +6,18 @@ import Image from 'next/image';
 export default function ExitIntentPopup() {
   const [showPopup, setShowPopup] = useState(false);
   const [hasShown, setHasShown] = useState(false);
+  const [suitsCount, setSuitsCount] = useState(47);
+
+  useEffect(() => {
+    fetch('/api/suits-count')
+      .then(res => res.json())
+      .then(data => {
+        if (data.availableSuits !== undefined) {
+          setSuitsCount(data.availableSuits);
+        }
+      })
+      .catch(err => console.error('Failed to fetch suits count:', err));
+  }, []);
 
   useEffect(() => {
     const handleMouseLeave = (e: MouseEvent) => {
@@ -95,7 +107,7 @@ export default function ExitIntentPopup() {
           {/* Urgency - Minimal */}
           <div className="bg-red-500/10 border-2 border-red-500/50 rounded-xl p-4 mb-6 text-center">
             <p className="text-yellow-400 font-bold text-lg">
-              ⚠️ Only 15 of 47 suits left!
+              ⚠️ Only {suitsCount} of 47 suits left!
             </p>
             <p className="text-red-400 text-sm mt-1">
               Deal ends Sunday midnight

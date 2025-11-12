@@ -1,4 +1,21 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
 export default function ValueStack() {
+  const [suitsCount, setSuitsCount] = useState(47);
+
+  useEffect(() => {
+    fetch('/api/suits-count')
+      .then(res => res.json())
+      .then(data => {
+        if (data.availableSuits !== undefined) {
+          setSuitsCount(data.availableSuits);
+        }
+      })
+      .catch(err => console.error('Failed to fetch suits count:', err));
+  }, []);
+
   const items = [
     { name: 'Double Layer SFI-5 Nomex Race Suit', value: '$799', icon: '🏎️' },
     { name: 'Matching Nomex Gloves', value: '$150', icon: '🧤' },
@@ -122,7 +139,7 @@ export default function ValueStack() {
           <div className="inline-block bg-yellow-400/10 border-2 border-yellow-400/40 rounded-xl px-8 py-4">
             <p className="text-yellow-400 font-bold text-lg flex items-center gap-3">
               <span className="text-2xl">⚠️</span>
-              Only 47 suits available at this price
+              Only {suitsCount} suits available at this price
               <span className="text-2xl">⚠️</span>
             </p>
           </div>

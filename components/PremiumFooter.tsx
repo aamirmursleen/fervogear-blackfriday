@@ -1,8 +1,22 @@
 'use client';
 
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 export default function PremiumFooter() {
+  const [suitsCount, setSuitsCount] = useState(47);
+
+  useEffect(() => {
+    fetch('/api/suits-count')
+      .then(res => res.json())
+      .then(data => {
+        if (data.availableSuits !== undefined) {
+          setSuitsCount(data.availableSuits);
+        }
+      })
+      .catch(err => console.error('Failed to fetch suits count:', err));
+  }, []);
+
   return (
     <footer className="relative overflow-hidden">
       {/* Main Footer */}
@@ -202,7 +216,7 @@ export default function PremiumFooter() {
       <div className="bg-gradient-to-r from-brand-orange via-orange-600 to-brand-orange py-4 animate-pulse">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="text-white font-bold text-lg">
-            🔥 LIMITED OFFER: Save $700.95 + FREE Gloves & Shoes • Only 47 Suits Available 🔥
+            🔥 LIMITED OFFER: Save $700.95 + FREE Gloves & Shoes • Only {suitsCount} Suits Available 🔥
           </p>
         </div>
       </div>
