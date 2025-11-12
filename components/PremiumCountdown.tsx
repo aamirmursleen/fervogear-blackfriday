@@ -31,7 +31,7 @@ export default function PremiumCountdown() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
             </span>
             <span className="font-bold text-xs text-white leading-tight">
-              🎁 FREE $400 Gear Bundle (Gloves + Shoes) with Every Custom Suit
+              🎁 FREE Matching Gloves + Shoes ($400 Value) with Every Custom Suit
             </span>
           </div>
 
@@ -55,7 +55,7 @@ export default function PremiumCountdown() {
               <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
             </span>
             <span className="font-bold text-base">
-              🎁 FREE $400 Gear Bundle (Gloves + Shoes) with Every Custom Suit
+              🎁 FREE Matching Gloves + Shoes ($400 Value) with Every Custom Suit
             </span>
           </div>
 
