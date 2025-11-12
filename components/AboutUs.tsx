@@ -31,7 +31,7 @@ export default function AboutUs() {
             <div className="absolute -inset-4 bg-gradient-to-r from-brand-orange to-orange-600 rounded-3xl opacity-20 blur-2xl group-hover:opacity-40 transition-opacity"></div>
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="https://fervogear.com/wp-content/uploads/2024/04/About-us-main-image.jpg"
+                src="https://fervogear.com/?seraph_accel_gi=wp-content%2Fuploads%2F2024%2F05%2FSendit-Rubi.jpg&n=RDpt87aIw6d7Hj4QYMeudw"
                 alt="FervoGear Team"
                 fill
                 className="object-cover transform group-hover:scale-110 transition-transform duration-700"
