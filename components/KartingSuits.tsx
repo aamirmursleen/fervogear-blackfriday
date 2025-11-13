@@ -207,7 +207,7 @@ export default function KartingSuits() {
               </li>
               <li className="flex items-start gap-2 text-gray-300">
                 <span className="text-green-500">✓</span>
-                <span>+ FREE Gloves + Shoes ($400 value)</span>
+                <span>+ FREE Gloves + Shoes ($400 value) - Black Friday Only!</span>
               </li>
             </ul>
 

@@ -120,15 +120,15 @@ export default function UltimateHero() {
               <div className="flex items-center justify-center gap-3 mb-2">
                 <span className="text-3xl">🎁</span>
                 <p className="text-2xl md:text-3xl font-black text-white">
-                  BLACK FRIDAY BONUS!
+                  BLACK FRIDAY EXCLUSIVE!
                 </p>
                 <span className="text-3xl">🎁</span>
               </div>
               <p className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent text-center">
-                Get FREE Matching Gloves ($200) + FREE Racing Shoes ($200)
+                FREE Matching Gloves + Shoes ($400 Value) with Every Custom Suit
               </p>
               <p className="text-gray-300 text-center mt-2 text-base md:text-lg">
-                That's <span className="text-white font-bold">$400 in FREE gear</span> when you order today! <span className="text-yellow-400">⚡</span>
+                <span className="text-white font-bold">SAVE 50%</span> - Get <span className="text-white font-bold">$800.95 OFF</span> + $400 in FREE Racing Gear! <span className="text-yellow-400">⚡</span>
               </p>
             </div>
 
@@ -391,15 +391,15 @@ export default function UltimateHero() {
               <div className="flex items-center justify-center gap-3 mb-2">
                 <span className="text-3xl">🎁</span>
                 <p className="text-2xl md:text-3xl font-black text-white">
-                  BLACK FRIDAY BONUS!
+                  BLACK FRIDAY EXCLUSIVE!
                 </p>
                 <span className="text-3xl">🎁</span>
               </div>
               <p className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent text-center">
-                Get FREE Matching Gloves ($200) + FREE Racing Shoes ($200)
+                FREE Matching Gloves + Shoes ($400 Value) with Every Custom Suit
               </p>
               <p className="text-gray-300 text-center mt-2 text-base md:text-lg">
-                That's <span className="text-white font-bold">$400 in FREE gear</span> when you order today! <span className="text-yellow-400">⚡</span>
+                <span className="text-white font-bold">SAVE 50%</span> - Get <span className="text-white font-bold">$800.95 OFF</span> + $400 in FREE Racing Gear! <span className="text-yellow-400">⚡</span>
               </p>
             </div>
 

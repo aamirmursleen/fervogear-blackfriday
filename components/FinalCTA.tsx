@@ -22,10 +22,13 @@ export default function FinalCTA() {
 
           <div className="bg-black/40 rounded-xl p-6 mb-8 inline-block">
             <div className="text-5xl md:text-6xl font-bold mb-2">
-              SAVE $800.95
+              SAVE 50% ($800.95)
             </div>
             <div className="text-xl">
-              Premium SFI-5 Suit + FREE Gloves + Shoes
+              Premium SFI-5 Suit + FREE Gloves + Shoes ($400 Value)
+            </div>
+            <div className="text-sm text-gray-300 mt-2">
+              🎁 Black Friday Exclusive Deal 🎁
             </div>
           </div>
 

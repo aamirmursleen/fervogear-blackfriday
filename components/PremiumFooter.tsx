@@ -200,7 +200,7 @@ export default function PremiumFooter() {
       <div className="bg-gradient-to-r from-brand-orange via-orange-600 to-brand-orange py-4 animate-pulse">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="text-white font-bold text-lg">
-            🎁 FREE Matching Gloves + Shoes ($400 Value) with Every Custom Suit 🎁
+            🎁 BLACK FRIDAY: FREE Matching Gloves + Shoes ($400 Value) with Every Custom Suit - SAVE 50%! 🎁
           </p>
         </div>
       </div>
