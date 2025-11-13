@@ -120,7 +120,7 @@ export default function UltimateHero() {
               <div className="flex items-center justify-center gap-3 mb-2">
                 <span className="text-3xl">🎁</span>
                 <p className="text-2xl md:text-3xl font-black text-white">
-                  LIMITED TIME BONUS!
+                  BLACK FRIDAY BONUS!
                 </p>
                 <span className="text-3xl">🎁</span>
               </div>
@@ -302,12 +302,12 @@ export default function UltimateHero() {
                           </svg>
                         </span>
                       </div>
-                      <div className="text-4xl font-bold text-brand-orange group-hover:text-orange-500 transition-colors">$899</div>
-                      <div className="text-gray-500 text-sm">Limited Time Offer</div>
+                      <div className="text-4xl font-bold text-brand-orange group-hover:text-orange-500 transition-colors">$799</div>
+                      <div className="text-gray-500 text-sm">Black Friday Price</div>
                     </div>
                     <div className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold text-center group-hover:bg-green-600 transition-colors">
                       <div className="text-xs">SAVE</div>
-                      <div className="text-xl">$700.95</div>
+                      <div className="text-xl">$800.95</div>
                     </div>
                   </div>
 
@@ -391,7 +391,7 @@ export default function UltimateHero() {
               <div className="flex items-center justify-center gap-3 mb-2">
                 <span className="text-3xl">🎁</span>
                 <p className="text-2xl md:text-3xl font-black text-white">
-                  LIMITED TIME BONUS!
+                  BLACK FRIDAY BONUS!
                 </p>
                 <span className="text-3xl">🎁</span>
               </div>
