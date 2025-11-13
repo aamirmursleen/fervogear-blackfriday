@@ -104,7 +104,7 @@ export default function KartingSuits() {
                 <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-6">
                   <h4 className="text-xl font-bold text-red-400 mb-4 flex items-center gap-2">
                     <span className="text-2xl">🔥</span>
-                    SFI-5 Suits ($799) - Embroidery Only
+                    SFI-5 Suits (Black Friday: $799) - Embroidery Only
                   </h4>
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
@@ -184,8 +184,8 @@ export default function KartingSuits() {
             <div className="text-center mb-6">
               <div className="text-5xl mb-3">🔥</div>
               <h3 className="text-2xl font-bold text-red-400 mb-2">SFI-5 Suits</h3>
-              <div className="text-4xl font-black text-white mb-2">$899</div>
-              <div className="text-gray-400 text-sm">Special Price (Save $700.95!)</div>
+              <div className="text-4xl font-black text-white mb-2">$799</div>
+              <div className="text-gray-400 text-sm">Black Friday (Save $800.95!)</div>
             </div>
 
             <ul className="space-y-3 mb-6">
@@ -207,7 +207,7 @@ export default function KartingSuits() {
               </li>
               <li className="flex items-start gap-2 text-gray-300">
                 <span className="text-green-500">✓</span>
-                <span>+ FREE Gloves ($150 value)</span>
+                <span>+ FREE Gloves + Shoes ($400 value)</span>
               </li>
             </ul>
 

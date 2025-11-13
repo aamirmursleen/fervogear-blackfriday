@@ -125,7 +125,7 @@ export default function UltimateHero() {
                 <span className="text-3xl">🎁</span>
               </div>
               <p className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent text-center">
-                Get FREE Matching Gloves ($150) + FREE Racing Shoes ($250)
+                Get FREE Matching Gloves ($200) + FREE Racing Shoes ($200)
               </p>
               <p className="text-gray-300 text-center mt-2 text-base md:text-lg">
                 That's <span className="text-white font-bold">$400 in FREE gear</span> when you order today! <span className="text-yellow-400">⚡</span>
@@ -315,7 +315,7 @@ export default function UltimateHero() {
                   <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl px-4 py-2 mb-2 group-hover:from-green-600 group-hover:to-emerald-600 transition-all">
                     <div className="flex items-center justify-center gap-2 text-sm font-bold">
                       <span>🎁</span>
-                      <span>FREE Gloves + Shoes ($400 Value)</span>
+                      <span>FREE Gloves ($200) + Shoes ($200)</span>
                       <span>🎁</span>
                     </div>
                   </div>
@@ -352,12 +352,12 @@ export default function UltimateHero() {
                         </svg>
                       </span>
                     </div>
-                    <div className="text-4xl font-bold text-brand-orange group-hover:text-orange-500 transition-colors">$899</div>
-                    <div className="text-gray-500 text-sm">Limited Time Offer</div>
+                    <div className="text-4xl font-bold text-brand-orange group-hover:text-orange-500 transition-colors">$799</div>
+                    <div className="text-gray-500 text-sm">Black Friday Price</div>
                   </div>
                   <div className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold text-center group-hover:bg-green-600 transition-colors">
                     <div className="text-xs">SAVE</div>
-                    <div className="text-xl">$700.95</div>
+                    <div className="text-xl">$800.95</div>
                   </div>
                 </div>
 
@@ -365,7 +365,7 @@ export default function UltimateHero() {
                 <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl px-4 py-2 mb-2 group-hover:from-green-600 group-hover:to-emerald-600 transition-all">
                   <div className="flex items-center justify-center gap-2 text-sm font-bold">
                     <span>🎁</span>
-                    <span>FREE Gloves + Shoes ($400 Value)</span>
+                    <span>FREE Gloves ($200) + Shoes ($200)</span>
                     <span>🎁</span>
                   </div>
                 </div>
@@ -396,7 +396,7 @@ export default function UltimateHero() {
                 <span className="text-3xl">🎁</span>
               </div>
               <p className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent text-center">
-                Get FREE Matching Gloves ($150) + FREE Racing Shoes ($250)
+                Get FREE Matching Gloves ($200) + FREE Racing Shoes ($200)
               </p>
               <p className="text-gray-300 text-center mt-2 text-base md:text-lg">
                 That's <span className="text-white font-bold">$400 in FREE gear</span> when you order today! <span className="text-yellow-400">⚡</span>

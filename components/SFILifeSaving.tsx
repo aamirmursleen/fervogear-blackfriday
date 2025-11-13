@@ -109,7 +109,7 @@ export default function SFILifeSaving() {
               GET MY LIFE-SAVING SFI-5 SUIT
             </a>
             <p className="text-gray-500 mt-6 text-sm">
-              ✓ SFI 3.2A/5 Certified • ✓ Double-Layer Nomex® • ✓ Special Offer: $899 (Save $700.95)
+              ✓ SFI 3.2A/5 Certified • ✓ Double-Layer Nomex® • ✓ Black Friday Offer: $799 (Save $800.95)
             </p>
           </div>
         </div>

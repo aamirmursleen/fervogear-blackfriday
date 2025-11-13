@@ -36,7 +36,7 @@ export default function FAQAccordion() {
     },
     {
       question: "What's included in the Black Friday deal?",
-      answer: "Double Layer SFI-5 rated Nomex suit ($1,100 value) + FREE matching racing gloves ($150 value) = Total $1,250 value for just $799. That's $451 in savings! Plus FREE USA shipping, FREE design mockup, and unlimited revisions. Limited to 47 suits."
+      answer: "Double Layer SFI-5 Nomex Race Suit ($899) + Premium Matching Racing Gloves ($200) + Matching Shoes ($200) + Custom Design Service ($200) + Premium Nomex Inner Lining ($150) + Unlimited Logo Embroidery ($100) + FREE USA Shipping ($50.95) = Total $1,599.95 value for just $799. That's $800.95 in savings! Plus FREE design mockup and unlimited revisions. Limited to 47 suits."
     },
     {
       question: "Can I see examples of custom designs?",

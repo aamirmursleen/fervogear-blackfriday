@@ -17,17 +17,18 @@ export default function ValueStack() {
   }, []);
 
   const items = [
-    { name: 'Double Layer SFI-5 Nomex Race Suit', value: '$799', icon: '🏎️' },
-    { name: 'Matching Nomex Gloves', value: '$150', icon: '🧤' },
-    { name: 'Matching Shoes', value: '$250', icon: '👟' },
+    { name: 'Double Layer SFI-5 Nomex Race Suit', value: '$899', icon: '🏎️' },
+    { name: 'Premium Matching Racing Gloves', value: '$200', icon: '🧤' },
+    { name: 'Matching Shoes', value: '$200', icon: '👟' },
     { name: 'Custom Design Service (Unlimited Revisions)', value: '$200', icon: '🎨' },
     { name: 'Premium Nomex Inner Lining Upgrade', value: '$150', icon: '💎' },
+    { name: 'Unlimited Logo Embroidery', value: '$100', icon: '✨' },
     { name: 'FREE USA Shipping', value: '$50.95', icon: '🚚' },
   ];
 
   const totalValue = 1599.95;
-  const dealPrice = 899;
-  const savings = 700.95;
+  const dealPrice = 799;
+  const savings = 800.95;
 
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">

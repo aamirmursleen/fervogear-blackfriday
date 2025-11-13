@@ -22,10 +22,10 @@ export default function FinalCTA() {
 
           <div className="bg-black/40 rounded-xl p-6 mb-8 inline-block">
             <div className="text-5xl md:text-6xl font-bold mb-2">
-              SAVE $451
+              SAVE $800.95
             </div>
             <div className="text-xl">
-              Premium SFI-5 Suit + FREE Gloves
+              Premium SFI-5 Suit + FREE Gloves + Shoes
             </div>
           </div>
 

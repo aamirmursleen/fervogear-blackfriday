@@ -6,15 +6,15 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Custom Auto Racing Suits | FervoGear USA - Save $926 Black Friday",
-  description: "Limited time Black Friday offer: Premium Double Layer SFI-5 Nomex Race Suit + FREE Matching Gloves from FervoGear USA. Save $926 this weekend only. Fully customizable, 3.5 week turnaround.",
+  title: "Custom Auto Racing Suits | FervoGear USA - Save $801 Black Friday",
+  description: "Limited time Black Friday offer: Premium Double Layer SFI-5 Nomex Race Suit + FREE Matching Gloves + FREE Shoes from FervoGear USA. Save $800.95 this weekend only. Fully customizable, 3.5 week turnaround.",
   keywords: "race suit, fire suit, Nomex suit, SFI-5, custom race suit, black friday, racing gear, FervoGear USA, auto racing suits",
   icons: {
     icon: 'https://fervogear.com/wp-content/uploads/2022/12/fervi-gear-logo-favicon-01.png',
     apple: 'https://fervogear.com/wp-content/uploads/2022/12/fervi-gear-logo-favicon-01.png',
   },
   openGraph: {
-    title: "Custom Auto Racing Suits | FervoGear USA Black Friday: Save $926 + FREE Gloves",
+    title: "Custom Auto Racing Suits | FervoGear USA Black Friday: Save $801 + FREE Gloves & Shoes",
     description: "Premium Double Layer SFI-5 Nomex Race Suit from FervoGear USA. Fully customizable. Limited quantities.",
     images: ["https://fervogear.com/wp-content/uploads/2025/10/Helloween.jpg"],
   },

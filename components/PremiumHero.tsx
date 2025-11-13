@@ -114,8 +114,8 @@ export default function PremiumHero() {
             <div className="absolute -top-6 -right-6 z-20 bg-gradient-to-br from-brand-orange to-orange-600 rounded-2xl p-6 shadow-2xl glow-orange transform rotate-3 hover:rotate-0 transition-transform duration-300">
               <div className="text-center">
                 <div className="text-sm font-semibold opacity-90">SAVE</div>
-                <div className="text-5xl font-bold">$451</div>
-                <div className="text-xs opacity-90">This Weekend</div>
+                <div className="text-5xl font-bold">$801</div>
+                <div className="text-xs opacity-90">Black Friday</div>
               </div>
             </div>
 
@@ -136,12 +136,12 @@ export default function PremiumHero() {
               <div className="absolute bottom-6 left-6 right-6 bg-black/80 backdrop-blur-md rounded-xl p-4 border border-gray-800">
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-sm text-gray-400">Starting at</div>
+                    <div className="text-sm text-gray-400">Black Friday Price</div>
                     <div className="text-3xl font-bold text-brand-orange">$799</div>
-                    <div className="text-xs text-gray-500 line-through">Reg. $1,100</div>
+                    <div className="text-xs text-gray-500 line-through">Total Value: $1,599.95</div>
                   </div>
                   <div className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold text-sm">
-                    $301 OFF
+                    $800.95 OFF
                   </div>
                 </div>
               </div>

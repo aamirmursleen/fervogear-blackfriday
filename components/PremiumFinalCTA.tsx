@@ -65,8 +65,8 @@ export default function PremiumFinalCTA() {
 
             <div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-3">💰</div>
-              <div className="font-semibold text-lg text-white mb-2">Save $700.95</div>
-              <div className="text-white/80 text-sm">Limited time special pricing</div>
+              <div className="font-semibold text-lg text-white mb-2">Save $800.95</div>
+              <div className="text-white/80 text-sm">Black Friday special pricing</div>
             </div>
           </div>
 

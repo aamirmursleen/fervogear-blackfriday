@@ -36,7 +36,7 @@ export default function InteractiveFAQ() {
     },
     {
       question: "What's included in this special offer?",
-      answer: "Double Layer SFI-5 Nomex Race Suit ($799) + FREE Matching Gloves ($150) + FREE Racing Shoes ($250) + Custom Design Service ($200) + Premium Nomex Inner Lining ($150) + FREE USA Shipping ($50.95) = Total $1,599.95 value for just $899. That's $700.95 in savings! Plus FREE design mockup and unlimited revisions. Limited to 47 suits."
+      answer: "Double Layer SFI-5 Nomex Race Suit ($899) + Premium Matching Racing Gloves ($200) + Matching Shoes ($200) + Custom Design Service ($200) + Premium Nomex Inner Lining ($150) + Unlimited Logo Embroidery ($100) + FREE USA Shipping ($50.95) = Total $1,599.95 value for just $799. That's $800.95 in savings! Plus FREE design mockup and unlimited revisions. Limited to 47 suits."
     },
     {
       question: "Can I see examples of custom designs?",

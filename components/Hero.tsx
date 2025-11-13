@@ -18,7 +18,7 @@ export default function Hero() {
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               Premium SFI-5 Race Suit
-              <span className="text-brand-orange"> + FREE Gloves</span>
+              <span className="text-brand-orange"> + FREE Gloves + Shoes</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8">
@@ -29,18 +29,21 @@ export default function Hero() {
             <div className="bg-gradient-to-r from-brand-orange/20 to-transparent border-l-4 border-brand-orange p-6 mb-8 rounded-r-lg">
               <div className="flex flex-col md:flex-row items-center md:items-end gap-4 mb-4">
                 <div>
-                  <div className="text-gray-400 text-sm line-through">Regular: $1,100</div>
+                  <div className="text-gray-400 text-sm line-through">Total Value: $1,599.95</div>
                   <div className="text-5xl md:text-6xl font-bold text-brand-orange">$799</div>
                 </div>
                 <div className="bg-green-500 text-white px-4 py-2 rounded-lg font-bold mb-2">
-                  SAVE $301
+                  SAVE $800.95
                 </div>
               </div>
               <div className="text-xl font-semibold border-t border-gray-700 pt-4">
-                + FREE Matching Gloves <span className="text-brand-orange">($150 Value)</span>
+                + FREE Matching Gloves <span className="text-brand-orange">($200 Value)</span>
+              </div>
+              <div className="text-xl font-semibold">
+                + FREE Matching Shoes <span className="text-brand-orange">($200 Value)</span>
               </div>
               <div className="text-2xl font-bold text-brand-orange mt-2">
-                Total Savings: $451
+                Total Savings: $800.95
               </div>
             </div>
 
@@ -80,7 +83,7 @@ export default function Hero() {
             </div>
             {/* Floating badge */}
             <div className="absolute -top-4 -right-4 bg-brand-orange text-white rounded-full w-32 h-32 flex flex-col items-center justify-center font-bold shadow-xl transform rotate-12">
-              <div className="text-3xl">$451</div>
+              <div className="text-3xl">$801</div>
               <div className="text-sm">OFF</div>
             </div>
           </div>
